@@ -139,6 +139,8 @@
   // Changes the color for the Alternate Player Box
   GM_addStyle('#hide-cizgi-video-0  {border: 1px solid #1d2022 !important;}');
   GM_addStyle('#hide-cizgi-video-0  {background: #0d0f14 !important;}');
+  GM_addStyle('#hide-anime-video-0  {border: 1px solid #1d2022 !important;}');
+  GM_addStyle('#hide-anime-video-0  {background: #0d0f14 !important;}');
 
   // Changes the color of the "Scroll to Top" Bar
   GM_addStyle('#btnTopPage {background-color: #055ae9 !important;}');
