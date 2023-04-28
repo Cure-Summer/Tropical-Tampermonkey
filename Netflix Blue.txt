@@ -1,0 +1,113 @@
+// ==UserScript==
+// @name         Netflix Blue
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  You Love Blue And You Know It's True!
+// @author       Cure Summer
+// @match        *://www.netflix.com/*
+// @grant        GM_addStyle
+// @run-at            document-start
+// ==/UserScript==
+
+(function() {
+  'use strict';
+
+/* This is the first one that I did all by myself!*/
+/* Unlike with YouTube Blue, Netflix uses "proper" Hexadecimal (well, kind of) as opposed to YouTube's "abrdiged" 3-Value Hex entries*/
+/* Just about everything that was feasible to change has been modified through this script, but for referential purposes, Netflix loves to use "#e50914" for its coloring*/
+/* In all but a few cases, I changed the aforementioned value to "#0071eb", which was actually a "stock" color that I found in the Inspector itself (so credit to the Inspector?) */
+/* Despite what my work might suggest, I actually like the classic Netflix Red. It aptly draws the mind to the Cinematic Aesthetic, which is befitting for a company as itself*/
+/* Nonetheless Blue as a color seems to be painfully underrepresented in the Higher Corporate Sphere, which is especially saddening considering how popular of a color it is.*/
+/* Now go watch some Precure, and let's Tropical Shine!*/
+
+/* The Front Page (i.e. "Netflix.com")*/
+  // Change color of Netflix Logo (Front Page)
+  GM_addStyle('.default-ltr-cache-mv4tc2 {color: #0071eb !important;}');
+
+  // Change color of Get Started Icon (Front Page)
+  GM_addStyle('.default-ltr-cache-1lbapgz {background: #0071eb !important;}');
+
+  // Change color of Log In/Sign Out Icon
+  GM_addStyle('.default-ltr-cache-p3xu0j {background: #0071eb !important;}');
+
+/* Registration/Sign-Up/Get Started Page (i.e. "Netflix.com/login")*/
+  // Change color of "Next" Button (Sign-Up Page)
+  GM_addStyle('.nf-btn-solid.nf-btn-primary, .nf-btn-twotone.nf-btn-primary {background-color: #0071eb !important;}');
+
+  // Change color of the Payment Plan Pointer (Alt Blue)
+  GM_addStyle('.planGrid__planLabel:after {border-top-color: #0168d7 !important;}');
+
+  // Change color of Payment Plan Box
+  GM_addStyle('.planGrid__planLabel {background: #0071eb !important;}');
+
+  // Change color of Payment Plan Checkmark
+  GM_addStyle('.checkmark-group--icon {color: #0071eb !important;}');
+
+  // Change color of Plan Details
+  GM_addStyle('.planGrid__cell.planGrid__cell--isSelected:not(.planGrid__featureCell) {fill: #0071eb !important;}');
+  GM_addStyle('.planGrid__cell.planGrid__cell--isSelected:not(.planGrid__featureCell) {color: #0071eb !important;}');
+
+  // Change color of see Plan Features
+  GM_addStyle('.default-ltr-cache-h6dhjb {background: #0071eb !important;}');
+
+  // Change color of Logging Out "Sign In" Button (This codes causes a Blue Box to envelop the Sign Out option on the Registration Page; places two slashes before the code to disable it)
+  GM_addStyle('.nfHeader .authLinks {background-color: #0071eb !important;}');
+
+/* Netflix Interface (The Actual Website, after you've logged in)*/
+  // Change color of Netflix Progress Bar
+  GM_addStyle('.progress-completed {background-color: #0071eb !important;}');
+
+  // Change color of Netflix Logo
+  GM_addStyle('.pinning-header .main-header .logo {color: #0071eb !important;}');
+
+  // Change color of Error Code Border (Alt Blue)
+  GM_addStyle('.error-page--content--errorCode span {background-color: #0071eb !important;}');
+
+  // Change color of the Progress Bar Head (Alt Blue)
+  GM_addStyle('.ltr-1gidbvb {background-color: #3509e5 !important;}');
+
+  // Change color of the Progress Bar Trail (Alt Blue)
+  GM_addStyle('.ltr-1xfifdu {background-color: #3509e5 !important;}');
+
+/* Login Page (i.e. "Netflix.com/login")*/
+  // Change color of Netflix Logo (Login Page)
+  GM_addStyle('.svg-nfLogo {fill: #0071eb !important;}');
+
+  // Change color of Netflix Logo (Login Page)
+  GM_addStyle('.nfLogo {color: #0071eb !important;}');
+
+  // Change color of the Login Logo
+  GM_addStyle('.login-button.btn {background-color: #0071eb !important;}');
+
+  // Change color of Authlink
+  GM_addStyle('.svg-nfLogo {fill: #0071eb !important;}');
+
+  // Change color of Something?
+  GM_addStyle('.sms-login .hr-red {fill: #095bb9 !important;}');
+
+  // Change color of A Red Netflix Button
+  GM_addStyle('.nf-button-red {background-color: #0071eb !important;}');
+  GM_addStyle('.nf-button-red {linear-gradient(180deg,#0356d3,#0738a5) !important;}');
+  GM_addStyle('.nf-button-red {1px solid #051f81 !important;}');
+
+  // Change color of Something about Hovering
+  GM_addStyle('.nf-button-red:hover {background: linear-gradient(#0071eb,#070b93) !important;}');
+  GM_addStyle('.nf-button-red:hover {background: linear-gradient(#0b0f9c,#072285) !important;}');
+
+  // Change color of (Primary Button?)
+  GM_addStyle('.btn-flat-primary {background-color: #0071eb; !important;}');
+  GM_addStyle('.btn-flat-primary {border-color: #0165d1; !important;}');
+
+  // Change color of (Primary Hover?)
+  GM_addStyle('.btn-flat-primary:hover {background-color: #0071eb !important;}');
+
+  // Change color of another Primary Button
+  GM_addStyle('.nf-flat-button-primary {background-color: #0974e5 !important;}');
+  GM_addStyle('.nf-flat-button-primary {border-color: #0071eb !important;}');
+
+  // Change color of yet another hover
+  GM_addStyle('.nf-flat-button-primary:hover {background-color: #0071eb !important;}');
+
+  // Change color of a number of things
+  GM_addStyle('.mylist-button:not(:disabled):focus .nf-flat-button-primary,.playLink:not(:disabled):focus .nf-flat-button-primary {background-color: #0071eb !important;}');
+})();

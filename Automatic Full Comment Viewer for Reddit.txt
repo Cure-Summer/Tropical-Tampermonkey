@@ -1,0 +1,25 @@
+// ==UserScript==
+// @name        Automatic Full Comment Viewer for Reddit
+// @version     12jan2021-stable
+// @description Appends ?limit=500 to Reddit comments because they should have done this anyway
+// @author      Cure Summer
+// @match       *://*.old.reddit.com/r/*/comments/*/*
+// @run-at      document-start
+// @grant       none
+// @namespace https://old.reddit.com
+// ==/UserScript==
+
+var oldUrlPath  = window.location.pathname;
+var oldSearch   = window.location.search;
+
+// Test that "?limit=500" does not exist in URL
+if ( ! /\?limit=500/.test (oldSearch) ) {
+
+    var newURL  = window.location.protocol + "//"
+                + window.location.host
+                + window.location.pathname
+                + window.location.search + "?limit=500"
+                + window.location.hash;
+    // replace() puts the good page in the history
+    window.location.replace (newURL);
+}

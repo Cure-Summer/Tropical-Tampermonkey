@@ -1,0 +1,116 @@
+// ==UserScript==
+// @name         YouTube Blue
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  You Love Blue And You Know It's True!
+// @author       Cure Summer, u/iviksok, u/disowned
+// @match        *://www.youtube.com/*
+// @grant        GM_addStyle
+// @run-at            document-start
+// ==/UserScript==
+
+(function() {
+  'use strict';
+
+/* While I have a certain degree of Programming knowledge, my understanding of this particular language is minimal at best.*/
+/* Nonetheless, I somehow managed to kludge together a fully functional YouTube Blue Layout Mod.*/
+/* Everything except for the Logo Color Mod was done by me (Cure Summer) through Trial and Error, and Inspect Element, which is why everything is so cluttered.*/
+/* With the exception of the YouTube Logo, I universally changed the color values from #f00 (pure red) to #00f (pure blue), so as to strike a poetic chord.*/
+/* If you want to change the color, here are some tips: each number (xyz) represent red, green, and blue, respectively. 0 is the lowest number, and f is the highest.*/
+/* If you are having difficulty with the Hexadecimal, Chrome's Inspect Element, and Gimp have visual aids for the color values...*/
+/* However if you are reading this, you likely already know all of this, but you never know.*/
+/* Tip: If you want to change all of the colors quickly, just use the "Replace All" feature*/
+/* Now go watch some Precure, and let's Tropical Shine!*/
+  // Change color of Progress Bar
+  GM_addStyle('.ytp-swatch-background-color {background-color: #00f !important;}');
+
+  // Change color of Progress Bar - Continued
+  GM_addStyle('.ytp-swatch-color {background-color: #00f !important;}');
+
+  // Change color of the Annotations Bar
+  GM_addStyle('.ytp-menuitem[aria-checked=true] .ytp-menuitem-toggle-checkbox {background: #00f !important;}');
+
+  // Change the color of the Subtitles Bar
+  GM_addStyle('.ytp-subtitles-button[aria-pressed=true]:after {background-color: #00f !important;}');
+
+  // Autonavigation Suggestion Card?
+  GM_addStyle('.ytp-autonav-suggestion-card[data-is-live=true] .ytp-autonav-live-stamp {background-color: #00f !important;}');
+
+  // Change color of more videos view
+  GM_addStyle('.ytp-more-videos-view, .ytp-suggestion-link, .ytp-suggestion-duration[data-is-live=true] {background-color: #00f !important;}');
+
+  // Up Next Container?
+  GM_addStyle('.ytp-autonav-endscreen-upnext-container[data-is-live=true] .ytp-autonav-live-stamp {background-color: #00f !important;}');
+
+
+  // Miscellaneous
+  //GM_addStyle('.ytp-related-on-error-overlay, .ytp-suggestion-link, .ytp-suggestion-duration[data-is-live=true] {background-color: #00f !important;}');
+
+  // Change color of Now Playing
+  GM_addStyle('.ytp-video-menu-item-now-playing {color: #00f !important;}');
+
+  // Heat Map Played Bar
+  //GM_addStyle('.ytp-heat-map-played_bar, .ytp-heat-map-play {background-color: #00f !important;}');
+
+  // Miscellaneous
+  //GM_addStyle('.ytp-inline-preview-ui, {background-color: #00f !important;}');
+
+  // Large Play Button
+  GM_addStyle('.ytp-large-play-button-red-bg .ytp-large-play-button-bg {background-color: #00f !important;}');
+
+  // Large Play Button Again?
+  //GM_addStyle('.ytp-large-play-button.ytp-touch-device, .ytp-large-play-button-bg, .ytp-cued-thumbnail-overlay:hover, .ytp-large-play-button-bg, .ytp-muted-autoplay-endscreen-overlay:hover, .ytp-large-play-button-bg {background-color: #00f !important;}');
+
+  // Play Button Test
+  //GM_addStyle('.ytp-large-play-button.ytp-touch-device, {background-color: #00f !important;}');
+
+    // Something about Settings
+  //GM_addStyle('.ytp-settings-button.ytp-hd-quality-badge:after, .ytp-settings-button.ytp-hdr-quality-badge:after, .ytp-settings-button.ytp-4k-quality-badge:after, .ytp-settings-button.ytp-5k-quality-badge:after, .ytp-settings-button.ytp-8k-quality-badge:after, .ytp-settings-button.ytp-3d-badge-grey:after, .ytp-settings-button.ytp-3d-badge:after {background-color: #00f !important;}');
+
+  // Something about Settings again
+  //GM_addStyle('.ytp-settings-button, .ytp-hdr-quality-badge:after {background-color: #00f !important;}');
+
+  // Might be the Play Button
+  //GM_addStyle('.ytp-chrome-controls, .ytp-button[aria-pressed]:after {background-color: #00f !important;}');
+
+/* The Following Code is for the Logo Modification, which I (Cure Summer) needed the assistance of the two credited Redditors for.*/
+/* If you encounter any errors, try typing in "unsafeWindow" without the quotation marks in the "@grant" row*/
+ function changeLogoColor(toColor) {
+    addStyle(`:root { --yt-spec-brand-icon-active: ${toColor} !important; }`); // Add global style to override SVG-styles
+    const els = document.getElementsByClassName('style-scope yt-icon'); // Get SVG-tags under yt-icon.
+    for (let el of els) {
+        if
+            (el.getAttribute('fill') && el.getAttribute('fill').toUpperCase() === '#FF0000') { // Change color if attribute is present and equal "#FF0000"
+            el.setAttribute('fill', toColor);
+        }
+    }
+}
+
+
+function changePlayButtonInLogoColor(toColor) {
+    addStyle(`:root { --yt-spec-brand-icon-active: ${toColor} !important; }`); // Add global style to override SVG-styles
+    const els = document.getElementsByClassName('style-scope yt-icon'); // Get SVG-tags under yt-icon.
+    for (let el of els) {
+        if
+            (el.getAttribute('fill') && el.getAttribute('fill').toUpperCase() === 'WHITE') { // Change color if attribute is present and equal "#FF0000"
+            el.setAttribute('fill', toColor);
+        }
+    }
+}
+
+
+function addStyle(css) {
+    const head = document.getElementsByTagName('head')[0];
+    const style = document.createElement('style');
+    style.innerHTML = css;
+    head.appendChild(style);
+}
+document.addEventListener('yt-rendererstamper-finished', function () {
+    //change color here
+    let colorBox = '#0055FF';
+    let colorPlayButton = 'white';
+
+    changeLogoColor(colorBox);
+    changePlayButtonInLogoColor(colorPlayButton);
+});
+})();

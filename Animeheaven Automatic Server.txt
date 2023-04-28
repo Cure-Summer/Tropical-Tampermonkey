@@ -1,0 +1,25 @@
+// ==UserScript==
+// @name        Animeheaven Automatic HServer
+// @version     12jan2021-stable
+// @description Append &s=hserver automatically so that Animeheaven won't annoy me
+// @author      Cure Summer
+// @match       *://*.animeheaven.ru/watch/*
+// @run-at      document-start
+// @grant       none
+// @namespace https://animeheaven.ru
+// ==/UserScript==
+
+var oldUrlPath  = window.location.pathname;
+var oldSearch   = window.location.search;
+
+// Test that "&s=hserver" does not exist in URL
+if ( ! /\&s=hserver/.test (oldSearch) ) {
+
+    var newURL  = window.location.protocol + "//"
+                + window.location.host
+                + window.location.pathname
+                + window.location.search + "&s=hserver"
+                + window.location.hash;
+    // replace() puts the good page in the history
+    window.location.replace (newURL);
+}

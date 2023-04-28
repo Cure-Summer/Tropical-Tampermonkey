@@ -1,0 +1,54 @@
+// ==UserScript==
+// @name         Blue YouTube Logo.
+// @namespace    http://larrystanfield.com
+// @version      1.1
+// @description  Change youtube icon color
+// @author       u/iviksok, edit by Larry Stanfield (u/disowned on le reddit), also credit to Cure Summer for being an idiot lol
+// @match        https://*.youtube.com/*
+// @grant        none
+// @run-at       document-end
+// ==/UserScript==
+
+
+/* This is an edited script, the original author is u/iviksok of reddit*/
+/* Source : https://www.reddit.com/r/GreaseMonkey/comments/pl7dv3/black_theme_youtube_logo/ */
+/* If you encounter any errors, try typing in "unsafeWindow" without the quotation marks in the "@grant" row*/
+
+function changeLogoColor(toColor) {
+    addStyle(`:root { --yt-spec-brand-icon-active: ${toColor} !important; }`); // Add global style to override SVG-styles
+    const els = document.getElementsByClassName('style-scope yt-icon'); // Get SVG-tags under yt-icon.
+    for (let el of els) {
+        if
+            (el.getAttribute('fill') && el.getAttribute('fill').toUpperCase() === '#FF0000') { // Change color if attribute is present and equal "#FF0000"
+            el.setAttribute('fill', toColor);
+        }
+    }
+}
+
+
+function changePlayButtonInLogoColor(toColor) {
+    addStyle(`:root { --yt-spec-brand-icon-active: ${toColor} !important; }`); // Add global style to override SVG-styles
+    const els = document.getElementsByClassName('style-scope yt-icon'); // Get SVG-tags under yt-icon.
+    for (let el of els) {
+        if
+            (el.getAttribute('fill') && el.getAttribute('fill').toUpperCase() === 'WHITE') { // Change color if attribute is present and equal "#FF0000"
+            el.setAttribute('fill', toColor);
+        }
+    }
+}
+
+
+function addStyle(css) {
+    const head = document.getElementsByTagName('head')[0];
+    const style = document.createElement('style');
+    style.innerHTML = css;
+    head.appendChild(style);
+}
+document.addEventListener('yt-rendererstamper-finished', function () {
+    //change color here
+    let colorBox = '#0055FF';
+    let colorPlayButton = 'white';
+
+    changeLogoColor(colorBox);
+    changePlayButtonInLogoColor(colorPlayButton);
+});
