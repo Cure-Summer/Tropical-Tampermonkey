@@ -1,0 +1,174 @@
+// ==UserScript==
+// @name         Watch Cartoon Online Ice Blue
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  You Love Blue And You Know It's True!
+// @author       Cure Summer
+// @match        *://www.wcofun.com/*
+// @grant        GM_addStyle
+// @run-at       document-start
+// ==/UserScript==
+
+(function() {
+  'use strict';
+
+/* This one was, by far, the most frustrating to work on!*/
+/* In addition to the process being unreasonably frustrated by single bars being split into multiple separate entries, I also had to personally patch the site's slipshod coding*/
+/* It turns out that naming some of your most important styles "a", would cause a massive Domino-Effect in the website's coding*/
+/* Worse yet, unlike with my work on the YouTube and Netflix mods, I was unable to implement the Layout Recoloration and the Logo/Banner Recoloration in the same code */
+/* Due to all of the aforementioned factors, I would probably consider this one my first "failure"*/
+/* The code for the Blue Banner will be posted at the botton of this code. Note that in order for the code to work, you will need to remove the slashes before each line*/
+/* On a separate file, Copy and Paste the UserScript stuff on to that file, replace the 'GM_addStyle" bit with "none", and remove the entire run-at line.*/
+/* Also, don't forget to Copy and Paste the actual code, itself. It cannot be used in its proper form here, but the code itself is perfectly functional on a seperate file.*/
+/* Now go watch some Precure, and let's Tropical Shine!*/
+
+  // Change color of Highlighted Anime
+  GM_addStyle('.recent-release {background: #0089ff !important;}');
+  GM_addStyle('.recent-release a {color: #fff !important;}');
+
+  // Change color of Highlighted Anime Border
+  GM_addStyle('#sidebar_today {border-color: #0089ff !important;}');
+  GM_addStyle('#sidebar_today a {color: #fff !important;}');
+
+  // Change color of Recent Releases
+  GM_addStyle('.sidebar-header {background: #0089ff !important;}');
+
+  // Change color of Recent Releases Border
+  GM_addStyle('.sidebar-all {border-color: #0089ff !important;}');
+
+  // Change color of Latest 50 Releases Border
+  GM_addStyle('#sidebar_right {border-color: #0089ff !important;}');
+
+  // Change color of the Dotted Lines
+  GM_addStyle('.sidebar-titles li {border-bottom: 1px dashed #006bff !important;}');
+
+  // Change color of Series Recently Added Borders
+  GM_addStyle('#sidebar_right2 {border-color: #0089ff !important;}');
+
+  // Change color of the Genre List Borders
+  GM_addStyle('#sidebar_right3 {border-color: #0089ff !important;}');
+
+  // Change color of the General Aesthetic
+  GM_addStyle('style attribute {background: #0089ff !important;}');
+
+  // Change color of General Aesthetic
+  GM_addStyle('element.style {background: #0089ff !important;}');
+
+  // Change color of the Navigation Bar
+  GM_addStyle('.nav-bar {background: #0089ff !important;}');
+
+  // Change color of the Navigation Bar when hovered over
+  GM_addStyle('.nav-bar>li:hover {background: #006BE1 !important;}');
+
+  // Change color of the Watch Now Button
+  GM_addStyle('.today-buton {background: #0089ff !important;}');
+
+  // Change color of the Search Bar
+  GM_addStyle('.button1 {background-color: #0089ff !important;}');
+  GM_addStyle('.button1 {border: 1px solid #0281ef !important;}');
+
+  // Change color of the Header (Bar on the top of the page)
+  GM_addStyle('.header-top {background: #0089ff !important;}');
+
+  // Change color of the Highlighted "Home" Bar on the Header
+  GM_addStyle('.active {background: #006BE1 !important;}');
+
+  // Change color of the Bottom Bar (Footer?)
+  GM_addStyle('.ftr_p {background: #0089ff !important;}');
+
+  // Change color of the Entries in the Genre List
+  GM_addStyle('.cerceve a {color: #076dd7 !important;}');
+
+  // Change color of the Special Entries in the Genre List
+  GM_addStyle('#sidebar_right3 a:visited {background: #85a0ed !important;}');
+
+  // Change color of Sidebar Hover Text
+  GM_addStyle('.sidebar-titles a:hover {color: #076dd7 !important;}');
+
+  // Change color of Another Sidebar (Subbed Anime)
+  GM_addStyle('#sidebar_right4 {border-color: #0089ff !important;}');
+
+  // General Entries Color Modifier (Caution: This one may cause functionality issues with the rest of the site)
+  GM_addStyle('a {color: #0089ff !important;}');
+
+  // Forces the Header Text to be white to rectify the issues with the "a" color code
+  GM_addStyle('.header-top a {color: #fff !important;}');
+  GM_addStyle('.header-top a:visited {color: #fff !important;}');
+
+  // Forces the Color of "Dubbed Anime" to be white to rectify the "a" color conflicts
+  GM_addStyle('.nav-bar>li a {color: #fff !important;}');
+
+  // Forces the Color of the Footer(?) Text to be white to rectify the "a" color conflicts
+  GM_addStyle('.ftr_p a {color: #fff !important;}');
+
+  // Change color of More Special Entries (Subbed Anime)
+  GM_addStyle('a:visited {color: #85a0ed !important;}');
+
+  // Changes the Background of the "Search" Results to be Darker
+  GM_addStyle('#sidebar_right2 {background-color: #1d2328 !important;}');
+
+  // Change color of the Secondary Background (Universally Background, but only really relevant for "Search")
+  GM_addStyle('body {background: #222b32 !important;}');
+
+  // Changes the color of the Text seen after making a search with the "Search" Feature (classified as the "body" colors as though it's essential, but only seems to be used here)
+  GM_addStyle('body {color: #d1dae7 !important;}');
+
+  // Changes the color for the Video Borders (Top Border)
+  GM_addStyle('.video-title {background: #0089ff !important;}');
+
+  // Changes the color for the Video Borders (Bottom Border)
+  GM_addStyle('.video-title2 {background: #0089ff !important;}');
+
+  // Fixes the color of the Previous and Next Episode Text
+  GM_addStyle('.prev-fln a {color: #fff !important;}');
+
+  // Changes the color of the Previous and Next Episode Border
+  GM_addStyle('.prev-next {background: #0089ff !important;}');
+
+  // Changes the color of the Previous and Next Episode Border when it is hovered over
+  GM_addStyle('.prev-next:hover {background: #46a6f9 !important;}');
+
+  // Changes the color of the Adblock Alert Banner
+  GM_addStyle('.alert {color: #fff !important;}');
+  GM_addStyle('.alert {background-color: #2e2d44 !important;}');
+
+  // Changes the color of the Support & Hide Ads Banner
+  GM_addStyle('[href^="https://user.wco.tv/wp-login.php"] {color: white !important;}');
+  GM_addStyle('[href^="https://user.wco.tv/wp-login.php"] {background: #1d212a !important;}');
+  GM_addStyle('[href^="https://user.wco.tv/wp-login.php?action=register"] {background: #0089ff !important;}');
+
+  // Changes the color for the Alternate Player Box
+  GM_addStyle('#hide-cizgi-video-0  {border: 1px solid #1d2022 !important;}');
+  GM_addStyle('#hide-cizgi-video-0  {background: #0d0f14 !important;}');
+  GM_addStyle('#hide-anime-video-0  {border: 1px solid #1d2022 !important;}');
+  GM_addStyle('#hide-anime-video-0  {background: #0d0f14 !important;}');
+
+  // Changes the color of the "Scroll to Top" Bar
+  GM_addStyle('#btnTopPage {background-color: #055ae9 !important;}');
+
+  // Changes the color of the Preview/Synopsis Border
+  GM_addStyle('#sidebar_cat {border-color: #0089ff !important;}');
+
+  // Changes the color of the Genre Buttons
+  GM_addStyle('.genre-buton {background: #0089ff !important;}');
+  GM_addStyle('.genre-buton {color: #fff !important;}');
+
+  // Changes the color of Dotted Lines that seperate the Episodes
+  GM_addStyle('.cat-eps {border-bottom: 1px dashed #006bff !important;}');
+
+  // Removes the Orange Glow when hovering over Episodes
+  //GM_addStyle('.cat-eps {background: #1E262D !important;}');
+
+  // Changes the color of the Series and Episode Display
+  GM_addStyle('.episode-descp span {color: #006bff !important;}');
+
+  // Changes the color of the Glow that surrounds the Episodes when they are hovered over
+  GM_addStyle('.cat-eps:hover {background: #023378 !important;}');
+
+/* Ice Blue Banner - Insert this code (without the slashes) on to a seperate file, Follow the instructions above for more assistance*/
+//(function() {
+  //'use strict';
+
+   //document.getElementsByClassName("img2")[0].src="https://images2.imgbox.com/bb/38/cZf4CDTQ_o.png";
+//})();
+})();
