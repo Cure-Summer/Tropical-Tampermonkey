@@ -93,6 +93,7 @@
 
   // Forces the Header Text to be white to rectify the issues with the "a" color code
   GM_addStyle('.header-top a {color: #fff !important;}');
+  GM_addStyle('.header-top a:visited {color: #fff !important;}');
 
   // Forces the Color of "Dubbed Anime" to be white to rectify the "a" color conflicts
   GM_addStyle('.nav-bar>li a {color: #fff !important;}');
