@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Watch Cartoon Online Blue
+// @name         Watch Cartoon Online Ice Blue
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  You Love Blue And You Know It's True!
@@ -23,73 +23,73 @@
 /* Now go watch some Precure, and let's Tropical Shine!*/
 
   // Change color of Highlighted Anime
-  GM_addStyle('.recent-release {background: #0259a5 !important;}');
+  GM_addStyle('.recent-release {background: #0089ff !important;}');
   GM_addStyle('.recent-release a {color: #fff !important;}');
 
   // Change color of Highlighted Anime Border
-  GM_addStyle('#sidebar_today {border-color: #0259a5 !important;}');
+  GM_addStyle('#sidebar_today {border-color: #0089ff !important;}');
   GM_addStyle('#sidebar_today a {color: #fff !important;}');
 
   // Change color of Recent Releases
-  GM_addStyle('.sidebar-header {background: #0259a5 !important;}');
+  GM_addStyle('.sidebar-header {background: #0089ff !important;}');
 
   // Change color of Recent Releases Border
-  GM_addStyle('.sidebar-all {border-color: #0259a5 !important;}');
+  GM_addStyle('.sidebar-all {border-color: #0089ff !important;}');
 
   // Change color of Latest 50 Releases Border
-  GM_addStyle('#sidebar_right {border-color: #0259a5 !important;}');
+  GM_addStyle('#sidebar_right {border-color: #0089ff !important;}');
 
   // Change color of the Dotted Lines
   GM_addStyle('.sidebar-titles li {border-bottom: 1px dashed #006bff !important;}');
 
   // Change color of Series Recently Added Borders
-  GM_addStyle('#sidebar_right2 {border-color: #0259a5 !important;}');
+  GM_addStyle('#sidebar_right2 {border-color: #0089ff !important;}');
 
   // Change color of the Genre List Borders
-  GM_addStyle('#sidebar_right3 {border-color: #0259a5 !important;}');
+  GM_addStyle('#sidebar_right3 {border-color: #0089ff !important;}');
 
   // Change color of the General Aesthetic
-  GM_addStyle('style attribute {background: #0259a5 !important;}');
+  GM_addStyle('style attribute {background: #0089ff !important;}');
 
   // Change color of General Aesthetic
-  GM_addStyle('element.style {background: #0259a5 !important;}');
+  GM_addStyle('element.style {background: #0089ff !important;}');
 
   // Change color of the Navigation Bar
-  GM_addStyle('.nav-bar {background: #0259a5 !important;}');
+  GM_addStyle('.nav-bar {background: #0089ff !important;}');
 
   // Change color of the Navigation Bar when hovered over
-  GM_addStyle('.nav-bar>li:hover {background: #023560 !important;}');
+  GM_addStyle('.nav-bar>li:hover {background: #006BE1 !important;}');
 
   // Change color of the Watch Now Button
-  GM_addStyle('.today-buton {background: #0259a5 !important;}');
+  GM_addStyle('.today-buton {background: #0089ff !important;}');
 
   // Change color of the Search Bar
-  GM_addStyle('.button1 {background-color: #0259a5 !important;}');
-  GM_addStyle('.button1 {border: 1px solid #055fad !important;}');
+  GM_addStyle('.button1 {background-color: #0089ff !important;}');
+  GM_addStyle('.button1 {border: 1px solid #0281ef !important;}');
 
   // Change color of the Header (Bar on the top of the page)
-  GM_addStyle('.header-top {background: #0259a5 !important;}');
+  GM_addStyle('.header-top {background: #0089ff !important;}');
 
   // Change color of the Highlighted "Home" Bar on the Header
-  GM_addStyle('.active {background: #023560 !important;}');
+  GM_addStyle('.active {background: #006BE1 !important;}');
 
   // Change color of the Bottom Bar (Footer?)
-  GM_addStyle('.ftr_p {background: #0259a5 !important;}');
+  GM_addStyle('.ftr_p {background: #0089ff !important;}');
 
   // Change color of the Entries in the Genre List
-  GM_addStyle('.cerceve a {color: #b5cce1 !important;}');
+  GM_addStyle('.cerceve a {color: #076dd7 !important;}');
 
   // Change color of the Special Entries in the Genre List
-  GM_addStyle('#sidebar_right3 a:visited {background: #a495e1 !important;}');
+  GM_addStyle('#sidebar_right3 a:visited {background: #85a0ed !important;}');
 
   // Change color of Sidebar Hover Text
   GM_addStyle('.sidebar-titles a:hover {color: #076dd7 !important;}');
 
   // Change color of Another Sidebar (Subbed Anime)
-  GM_addStyle('#sidebar_right4 {border-color: #0259a5 !important;}');
+  GM_addStyle('#sidebar_right4 {border-color: #0089ff !important;}');
 
   // General Entries Color Modifier (Caution: This one may cause functionality issues with the rest of the site)
-  GM_addStyle('a {color: #4f93cf !important;}');
+  GM_addStyle('a {color: #0089ff !important;}');
 
   // Forces the Header Text to be white to rectify the issues with the "a" color code
   GM_addStyle('.header-top a {color: #fff !important;}');
@@ -102,7 +102,7 @@
   GM_addStyle('.ftr_p a {color: #fff !important;}');
 
   // Change color of More Special Entries (Subbed Anime)
-  GM_addStyle('a:visited {color: #a495e1 !important;}');
+  GM_addStyle('a:visited {color: #85a0ed !important;}');
 
   // Changes the Background of the "Search" Results to be Darker
   GM_addStyle('#sidebar_right2 {background-color: #1d2328 !important;}');
@@ -114,19 +114,19 @@
   GM_addStyle('body {color: #d1dae7 !important;}');
 
   // Changes the color for the Video Borders (Top Border)
-  GM_addStyle('.video-title {background: #0259a5 !important;}');
+  GM_addStyle('.video-title {background: #0089ff !important;}');
 
   // Changes the color for the Video Borders (Bottom Border)
-  GM_addStyle('.video-title2 {background: #0259a5 !important;}');
+  GM_addStyle('.video-title2 {background: #0089ff !important;}');
 
   // Fixes the color of the Previous and Next Episode Text
   GM_addStyle('.prev-fln a {color: #fff !important;}');
 
   // Changes the color of the Previous and Next Episode Border
-  GM_addStyle('.prev-next {background: #0259a5 !important;}');
+  GM_addStyle('.prev-next {background: #0089ff !important;}');
 
   // Changes the color of the Previous and Next Episode Border when it is hovered over
-  GM_addStyle('.prev-next:hover {background: #0473d5 !important;}');
+  GM_addStyle('.prev-next:hover {background: #46a6f9 !important;}');
 
   // Changes the color of the Adblock Alert Banner
   GM_addStyle('.alert {color: #fff !important;}');
@@ -135,7 +135,7 @@
   // Changes the color of the Support & Hide Ads Banner
   GM_addStyle('[href^="https://user.wco.tv/wp-login.php"] {color: white !important;}');
   GM_addStyle('[href^="https://user.wco.tv/wp-login.php"] {background: #1d212a !important;}');
-  GM_addStyle('[href^="https://user.wco.tv/wp-login.php?action=register"] {background: #0259a5 !important;}');
+  GM_addStyle('[href^="https://user.wco.tv/wp-login.php?action=register"] {background: #0089ff !important;}');
 
   // Changes the color for the Alternate Player Box
   GM_addStyle('#hide-cizgi-video-0  {border: 1px solid #1d2022 !important;}');
@@ -147,10 +147,10 @@
   GM_addStyle('#btnTopPage {background-color: #055ae9 !important;}');
 
   // Changes the color of the Preview/Synopsis Border
-  GM_addStyle('#sidebar_cat {border-color: #0259a5 !important;}');
+  GM_addStyle('#sidebar_cat {border-color: #0089ff !important;}');
 
   // Changes the color of the Genre Buttons
-  GM_addStyle('.genre-buton {background: #0259a5 !important;}');
+  GM_addStyle('.genre-buton {background: #0089ff !important;}');
   GM_addStyle('.genre-buton {color: #fff !important;}');
 
   // Changes the color of Dotted Lines that seperate the Episodes
@@ -163,7 +163,7 @@
   GM_addStyle('.episode-descp span {color: #006bff !important;}');
 
   // Changes the color of the Glow that surrounds the Episodes when they are hovered over
-  GM_addStyle('.cat-eps:hover {background: #0259a5 !important;}');
+  GM_addStyle('.cat-eps:hover {background: #023378 !important;}');
 
   // Synchronizes the Star Rating Background Color with that of the new Background's
   GM_addStyle('div.jStar {background-image: url(https://images2.imgbox.com/08/47/QwAfWYpJ_o.png) !important;}');
