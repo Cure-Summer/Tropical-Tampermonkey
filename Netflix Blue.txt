@@ -108,6 +108,17 @@
   // Change color of yet another hover
   GM_addStyle('.nf-flat-button-primary:hover {background-color: #0071eb !important;}');
 
+  // Replaces the Red Spinner with a Blue Spinner. Nullify this line or change the reference url if the original goes down
+  GM_addStyle('.nf-loading-spinner {background-image: url(https://images2.imgbox.com/d4/fb/qt0CQ98D_o.png) !important;}');
+
+  GM_addStyle('.error-page--content--errorCode span {border-left: 2px solid #0252a9 !important;}');
+
+  // Replaces the Netflix Logo seen on the error page. Nullify this line or change the reference url if the original goes down
+  GM_addStyle('.error-page--logo a {background-image: url(https://images2.imgbox.com/ef/59/C3WIBQC1_o.png) !important;}');
+
+  // Change color of the "Your Account" Netflix Logo
+  GM_addStyle('#hd .logo .svg-icon-netflix-logo  {fill: #0071eb !important;}');
+
   // Change color of a number of things
   GM_addStyle('.mylist-button:not(:disabled):focus .nf-flat-button-primary,.playLink:not(:disabled):focus .nf-flat-button-primary {background-color: #0071eb !important;}');
 })();
