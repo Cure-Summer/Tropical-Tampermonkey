@@ -168,6 +168,11 @@
   // Synchronizes the Star Rating Background Color with that of the new Background's
   GM_addStyle('div.jStar {background-image: url(https://images2.imgbox.com/08/47/QwAfWYpJ_o.png) !important;}');
 
+  // Fixing the Updated Background
+  GM_addStyle('.row {background: #1e262d !important;}');
+  GM_addStyle('.row {border-left: solid #1e262d 2px !important;}');
+  GM_addStyle('.row {border-right: solid #1e262d 2px !important;}');
+
 /* Ice Blue Banner - Insert this code (without the slashes) on to a seperate file, Follow the instructions above for more assistance*/
 //(function() {
   //'use strict';
