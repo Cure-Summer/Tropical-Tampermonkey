@@ -107,7 +107,7 @@
   // Changes the Background of the "Search" Results to be Darker
   GM_addStyle('#sidebar_right2 {background-color: #1d2328 !important;}');
 
-  // Change color of the Secondary Background (Universally Background, but only really relevant for "Search")
+  // Change color of the Secondary Background (Universal Background, but only really relevant for "Search")
   GM_addStyle('body {background: #222b32 !important;}');
 
   // Changes the color of the Text seen after making a search with the "Search" Feature (classified as the "body" colors as though it's essential, but only seems to be used here)
@@ -167,6 +167,11 @@
 
   // Synchronizes the Star Rating Background Color with that of the new Background's
   GM_addStyle('div.jStar {background-image: url(https://images2.imgbox.com/08/47/QwAfWYpJ_o.png) !important;}');
+
+  // Fixing the Updated Background
+  GM_addStyle('.row {background: #1e262d !important;}');
+  GM_addStyle('.row {border-left: solid #1e262d 2px !important;}');
+  GM_addStyle('.row {border-right: solid #1e262d 2px !important;}');
 
 /* Ice Blue Banner - Insert this code (without the slashes) on to a seperate file, Follow the instructions above for more assistance*/
 //(function() {
