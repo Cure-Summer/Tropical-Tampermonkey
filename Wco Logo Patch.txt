@@ -12,7 +12,7 @@
 (function() {
   'use strict';
 
-    document.getElementsByClassName("img2")[0].src="https://images2.imgbox.com/bb/38/cZf4CDTQ_o.png";
+    document.getElementsByClassName("img2")[0].src="https://images2.imgbox.com/df/59/BCuHFMUp_o.png";
     //image can be replaced with logo you create by changing src="img"
     //this works on the top left yt logo shown, when pressed redirects to home page
 })();
