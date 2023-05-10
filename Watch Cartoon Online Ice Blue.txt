@@ -15,12 +15,15 @@
 /* This one was, by far, the most frustrating to work on!*/
 /* In addition to the process being unreasonably frustrated by single bars being split into multiple separate entries, I also had to personally patch the site's slipshod coding*/
 /* It turns out that naming some of your most important styles "a", would cause a massive Domino-Effect in the website's coding*/
-/* Worse yet, unlike with my work on the YouTube and Netflix mods, I was unable to implement the Layout Recoloration and the Logo/Banner Recoloration in the same code */
-/* Due to all of the aforementioned factors, I would probably consider this one my first "failure"*/
-/* The code for the Blue Banner will be posted at the botton of this code. Note that in order for the code to work, you will need to remove the slashes before each line*/
-/* On a separate file, Copy and Paste the UserScript stuff on to that file, replace the 'GM_addStyle" bit with "none", and remove the entire run-at line.*/
-/* Also, don't forget to Copy and Paste the actual code, itself. It cannot be used in its proper form here, but the code itself is perfectly functional on a seperate file.*/
+/* Keep in mind that the Coding on this site was SO bad, that you will need to run the Header/Banner/Logo Patch as a separate Script. It cannot be used here */
+/* To make the Header Patch work, either Install it, or Copy the Code that I left on the bottom, and Paste it without the slashes on to a New, Clean, Empty Script */
+/* Also, on that new file/script that you create, if you're struggling with setting up the UserScript stuff at the top of this file, read the Userscript Help on the line below*/
+/* Userscript Help: Copy and Paste the UserScript stuff onto your new file, replace the 'GM_addStyle" bit with "none", and remove the entire run-at line.*/
+/* With that, I hope that you enjoy the new Layout! .*/
 /* Now go watch some Precure, and let's Tropical Shine!*/
+
+  // Custom Header - WCO Header Replacement Patch - Keep this code in this File. The one you need to transfer is at the bottom of this File.
+  GM_addStyle('.img2 {background-image: url(https://images2.imgbox.com/6f/bf/zuKOYtgx_o.png) !important;}');
 
   // Change color of Highlighted Anime
   GM_addStyle('.recent-release {background: #0089ff !important;}');
@@ -173,6 +176,25 @@
   GM_addStyle('.row {border-left: solid #1e262d 2px !important;}');
   GM_addStyle('.row {border-right: solid #1e262d 2px !important;}');
 
+  // Background Fixes
+  // Change the actual Background Color of the Ongoing & Popular Series Background
+  GM_addStyle('.sidebar-titles {background: #1e262d !important;}');
+  // Change the actual Background Color of Latest 50 Releases Border
+  GM_addStyle('#sidebar_right {background-color: #1e262d !important;}');
+  // Change the actual Background Color of the Genre List Borders
+  GM_addStyle('#sidebar_right3 {background-color: #1e262d !important;}');
+  // Change the actual Background Color of interior of the Genre List Borders
+  GM_addStyle('.cerceve {background: #1e262d !important;}');
+  // Change the actual Background Color of interior of the Genre List Hover Proper
+  GM_addStyle('.cerceve:hover {background-color: #5b626b !important;}');
+  // Change the actual Background Color of the Topmost Edge of the Recent Releases Background...
+  GM_addStyle('.sidebar-all {background-color: #1e262d !important;}');
+  // Change the actual Background Color of the Synopsis Highlight that appears after selecting a series to watch
+  GM_addStyle('#sidebar_cat {background-color: #1e262d !important;}');
+
+  // Changes the Color of the Recent Releases Borders
+  GM_addStyle('.jcarousel li {border: 3px solid #1e262d !important;}');
+
   // Changes the Recent Releases Arrow Button Colors
   GM_addStyle('.jcarousel-control-prev, .jcarousel-control-next {background: #161b24 !important;}');
   GM_addStyle('.jcarousel-control-prev, .jcarousel-control-next {box-shadow: 0 0 4px #b0bad1 !important;}');
@@ -180,10 +202,9 @@
   // Changes the color of New Premium Gradient Bar
   GM_addStyle('.btn-1 {background-image: linear-gradient(to right, #0d0f14 20%, #171d2c 60%, #233054 80%) !important;}');
 
-/* Ice Blue Banner - Insert this code (without the slashes) on to a seperate file, Follow the instructions above for more assistance*/
+/* WCO Header Universal Patch - Insert this code (without the slashes) on to a seperate file, Follow the instructions above for more assistance*/
 //(function() {
   //'use strict';
 
-   //document.getElementsByClassName("img2")[0].src="https://images2.imgbox.com/df/59/BCuHFMUp_o.png";
-//})();
+   //document.getElementsByClassName("img2")[0].src="https://images2.imgbox.com/6f/51/3qHgOWPC_o.png";
 })();
