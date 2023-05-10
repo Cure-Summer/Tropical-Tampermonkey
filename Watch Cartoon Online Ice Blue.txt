@@ -144,7 +144,7 @@
   GM_addStyle('#hide-anime-video-0  {background: #0d0f14 !important;}');
 
   // Changes the color of the "Scroll to Top" Bar
-  GM_addStyle('#btnTopPage {background-color: #055ae9 !important;}');
+  GM_addStyle('#btnTopPage {background-color: #270858 !important;}');
 
   // Changes the color of the Preview/Synopsis Border
   GM_addStyle('#sidebar_cat {border-color: #0089ff !important;}');
