@@ -46,7 +46,7 @@
   GM_addStyle('#sidebar_right {border-color: #3d028d !important;}');
 
   // Change color of the Dotted Lines
-  GM_addStyle('.sidebar-titles li {border-bottom: 1px dashed #006bff !important;}');
+  GM_addStyle('.sidebar-titles li {border-bottom: 1px dashed #6200ff !important;}');
 
   // Change color of Series Recently Added Borders
   GM_addStyle('#sidebar_right2 {border-color: #3d028d !important;}');
@@ -160,7 +160,7 @@
   GM_addStyle('.genre-buton {color: #fff !important;}');
 
   // Changes the color of Dotted Lines that seperate the Episodes
-  GM_addStyle('.cat-eps {border-bottom: 1px dashed #006bff !important;}');
+  GM_addStyle('.cat-eps {border-bottom: 1px dashed #6200ff !important;}');
 
   // Removes the Orange Glow when hovering over Episodes
   //GM_addStyle('.cat-eps {background: #251e2d !important;}');
