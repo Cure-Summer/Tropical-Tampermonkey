@@ -173,6 +173,10 @@
   GM_addStyle('.row {border-left: solid #1e262d 2px !important;}');
   GM_addStyle('.row {border-right: solid #1e262d 2px !important;}');
 
+  // Changes the Recent Releases Arrow Button Colors
+  GM_addStyle('.jcarousel-control-prev, .jcarousel-control-next {background: #161b24 !important;}');
+  GM_addStyle('.jcarousel-control-prev, .jcarousel-control-next {box-shadow: 0 0 4px #b0bad1 !important;}');
+
   // Changes the color of New Premium Gradient Bar
   GM_addStyle('.btn-1 {background-image: linear-gradient(to right, #0d0f14 20%, #171d2c 60%, #233054 80%) !important;}');
 
