@@ -204,6 +204,8 @@
   GM_addStyle('.sidebar-all {background-color: #1b1a26 !important;}');
   // Change the actual Background Color of the Synopsis Highlight that appears after selecting a series to watch
   GM_addStyle('#sidebar_cat {background-color: #1b1a26 !important;}');
+  // Change the actual Background Color of the Highlighted Anime Box
+  GM_addStyle('#sidebar_today {background-color: #1b1a26 !important;}');
 
   // Change the actual Background Color of interior of the Genre List Hover
   //GM_addStyle('.cerceve a:hover {color: #5b626b !important;}');
