@@ -1,0 +1,18 @@
+// ==UserScript==
+// @name         Wco Header Universal Patch
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  You Love Blue And You Know It's True!
+// @author       Cure Summer
+// @match        *://www.wcofun.com/*
+// @grant        none
+// @run-at       start
+// ==/UserScript==
+
+(function() {
+  'use strict';
+
+    document.getElementsByClassName("img2")[0].src="https://images2.imgbox.com/6f/51/3qHgOWPC_o.png";
+    //image can be replaced with logo you create by changing src="img"
+    //this works on the top left yt logo shown, when pressed redirects to home page
+})();
