@@ -26,8 +26,8 @@
   // Custom Header - WCO Header Replacement Patch - Keep this code in this File. The one you need to transfer is at the bottom of this File.
   GM_addStyle('.img2 {background-image: url(https://images2.imgbox.com/f8/f7/lugcjHJu_o.png) !important;}');
 
-  // Changes the Background of the "Search" Results to be Darker
-  GM_addStyle('#sidebar_right2 {background-color: #161922 !important;}');
+  // Changes the Background of the "Search" Results to be Darker (Transparency)
+  GM_addStyle('#sidebar_right2 {background-color: #343c3c1f !important;}');
 
   // Change color of the Secondary Background (Universal Background, but only really relevant for "Search")
   GM_addStyle('body {background: #14171E !important;}');
@@ -207,6 +207,17 @@
 
   // Changes the color of New Premium Gradient Bar
   GM_addStyle('.btn-1 {background-image: linear-gradient(to right, #0d0f14 20%, #1f232c 60%, #2d3240 80%) !important;}');
+
+  // Alternate Colors for certain elements
+ // Rainfall Alternate Colors
+ //Color Value for Standard Text
+ //#878889
+
+ //Color Value for Visited Links
+ //#c1c4c7
+
+//Color Value for Dotted Lines
+//#737699
 
 /* WCO Header Universal Patch - Insert this code (without the slashes) on to a seperate file, Follow the instructions above for more assistance*/
 //(function() {
