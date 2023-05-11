@@ -1,0 +1,231 @@
+// ==UserScript==
+// @name         Watch Cartoon Online Monochrome
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Monochromatic!
+// @author       Cure Summer, Ninja Enterprise
+// @match        *://www.wcofun.com/*
+// @grant        GM_addStyle
+// @run-at       document-start
+// ==/UserScript==
+
+(function() {
+  'use strict';
+
+/* This one was, by far, the most frustrating to work on!*/
+/* In addition to the process being unreasonably frustrated by single bars being split into multiple separate entries, I also had to personally patch the site's slipshod coding*/
+/* It turns out that naming some of your most important styles "a", would cause a massive Domino-Effect in the website's coding*/
+/* Keep in mind that the Coding on this site was SO bad, that you will need to run the Header/Banner/Logo Patch as a separate Script. It cannot be used here */
+/* To make the Header Patch work, either Install it, or Copy the Code that I left on the bottom, and Paste it without the slashes on to a New, Clean, Empty Script */
+/* Also, on that new file/script that you create, if you're struggling with setting up the UserScript stuff at the top of this file, read the Userscript Help on the line below*/
+/* Userscript Help: Copy and Paste the UserScript stuff onto your new file, replace the 'GM_addStyle" bit with "none", and remove the entire run-at line.*/
+/* Thanks for giving this special Layout a try, and thank you to the "Ninja Enterprise", too! */
+/* With that, I hope that you enjoy the new Layout!  */
+/* Now go watch some Precure, and let's Tropical Shine!*/
+
+  // Custom Header - WCO Header Replacement Patch - Keep this code in this File. The one you need to transfer is at the bottom of this File.
+  GM_addStyle('.img2 {background-image: url(https://images2.imgbox.com/12/bf/lvVf01CV_o.png) !important;}');
+
+  // Changes the Background of the "Search" Results to be Darker (Transparency)
+  GM_addStyle('#sidebar_right2 {background-color: #3c3c341f !important;}');
+
+  // Change color of the Secondary Background (Universal Background, but only really relevant for "Search")
+  GM_addStyle('body {background: #14171E !important;}');
+
+  // Change color of Highlighted Anime
+  GM_addStyle('.recent-release {background: #727270a6 !important;}');
+  GM_addStyle('.recent-release a {color: #fff !important;}');
+
+  // Change color of Highlighted Anime Border
+  GM_addStyle('#sidebar_today {border-color: #727270a6 !important;}');
+  GM_addStyle('#sidebar_today a {color: #fff !important;}');
+
+  // Change color of Recent Releases
+  GM_addStyle('.sidebar-header {background: #727270a6 !important;}');
+
+  // Change color of Recent Releases Border
+  GM_addStyle('.sidebar-all {border-color: #727270a6 !important;}');
+
+  // Change color of Latest 50 Releases Border
+  GM_addStyle('#sidebar_right {border-color: #727270a6 !important;}');
+
+  // Change color of the Dotted Lines
+  GM_addStyle('.sidebar-titles li {border-bottom: 1px dashed #959713 !important;}');
+
+  // Change color of Series Recently Added Borders
+  GM_addStyle('#sidebar_right2 {border-color: #727270a6 !important;}');
+
+  // Change color of the Genre List Borders
+  GM_addStyle('#sidebar_right3 {border-color: #727270a6 !important;}');
+
+  // Change color of the General Aesthetic
+  GM_addStyle('style attribute {background: #727270a6 !important;}');
+
+  // Change color of General Aesthetic
+  GM_addStyle('element.style {background: #727270a6 !important;}');
+
+  // Change color of the Navigation Bar
+  GM_addStyle('.nav-bar {background: #727270a6 !important;}');
+
+  // Change color of the Navigation Bar when hovered over
+  GM_addStyle('.nav-bar>li:hover {background: #979593a6 !important;}');
+
+  // Change color of the Watch Now Button
+  GM_addStyle('.today-buton {background: #727270a6 !important;}');
+
+  // Change color of the Search Bar
+  GM_addStyle('.button1 {background-color: #727270a6 !important;}');
+  GM_addStyle('.button1 {border: 1px solid #727270a6 !important;}');
+
+  // Change color of the Header (Bar on the top of the page)
+  GM_addStyle('.header-top {background: #727270a6 !important;}');
+
+  // Change color of the Highlighted "Home" Bar on the Header
+  GM_addStyle('.active {background: #979593a6 !important;}');
+
+  // Change color of the Bottom Bar (Footer?) - The Transparency will need to be disabled for this particular Bar
+  GM_addStyle('.ftr_p {background: #727270 !important;}');
+
+  // Change color of the Entries in the Genre List
+  GM_addStyle('.cerceve a {color: #898787 !important;}');
+
+  // Change color of the Special Entries in the Genre List
+  GM_addStyle('#sidebar_right3 a:visited {background: #a19a6a !important;}');
+
+  // Change color of Sidebar Hover Text
+  GM_addStyle('.sidebar-titles a:hover {color: #bcc0c5 !important;}');
+
+  // Change color of Another Sidebar (Subbed Anime)
+  GM_addStyle('#sidebar_right4 {border-color: #727270a6 !important;}');
+
+  // General Entries Color Modifier (Caution: This one may cause functionality issues with the rest of the site)
+  GM_addStyle('a {color: #898787 !important;}');
+
+  // Forces the Header Text to be white to rectify the issues with the "a" color code
+  GM_addStyle('.header-top a {color: #fff !important;}');
+  GM_addStyle('.header-top a:visited {color: #fff !important;}');
+
+  // Forces the Color of "Dubbed Anime" to be white to rectify the "a" color conflicts
+  GM_addStyle('.nav-bar>li a {color: #fff !important;}');
+
+  // Forces the Color of the Footer(?) Text to be white to rectify the "a" color conflicts
+  GM_addStyle('.ftr_p a {color: #fff !important;}');
+
+  // Change color of More Special Entries (Subbed Anime)
+  GM_addStyle('a:visited {color: #a19a6a !important;}');
+
+  // Custom Background Image Patcher
+  GM_addStyle('body {background-image: url(https://images2.imgbox.com/ea/61/50C6fEi9_o.png) !important;}');
+
+  // Changes the color of the Text seen after making a search with the "Search" Feature (classified as the "body" colors as though it's essential, but only seems to be used here)
+  GM_addStyle('body {color: #d1dae7 !important;}');
+
+  // Changes the color for the Video Borders (Top Border)
+  GM_addStyle('.video-title {background: #727270a6 !important;}');
+
+  // Changes the color for the Video Borders (Bottom Border)
+  GM_addStyle('.video-title2 {background: #727270a6 !important;}');
+
+  // Fixes the color of the Previous and Next Episode Text
+  GM_addStyle('.prev-fln a {color: #fff !important;}');
+
+  // Changes the color of the Previous and Next Episode Border
+  GM_addStyle('.prev-next {background: #727270a6 !important;}');
+
+  // Changes the color of the Previous and Next Episode Border when it is hovered over
+  GM_addStyle('.prev-next:hover {background: #afacaca6 !important;}');
+
+  // Changes the color of the Adblock Alert Banner
+  GM_addStyle('.alert {color: #fff !important;}');
+  GM_addStyle('.alert {background-color: #232324 !important;}');
+
+  // Changes the color of the Support & Hide Ads Banner
+  GM_addStyle('[href^="https://user.wco.tv/wp-login.php"] {color: white !important;}');
+  GM_addStyle('[href^="https://user.wco.tv/wp-login.php"] {background: #1d212a !important;}');
+  GM_addStyle('[href^="https://user.wco.tv/wp-login.php?action=register"] {background: #72707000 !important;}');
+
+  // Changes the color for the Alternate Player Box
+  GM_addStyle('#hide-cizgi-video-0  {border: 1px solid #1d2022 !important;}');
+  GM_addStyle('#hide-cizgi-video-0  {background: #0d0f14 !important;}');
+  GM_addStyle('#hide-anime-video-0  {border: 1px solid #1d2022 !important;}');
+  GM_addStyle('#hide-anime-video-0  {background: #0d0f14 !important;}');
+
+  // Changes the color of the "Scroll to Top" Bar
+  GM_addStyle('#btnTopPage {background-color: #58523d !important;}');
+
+  // Changes the color of the Preview/Synopsis Border
+  GM_addStyle('#sidebar_cat {border-color: #727270a6 !important;}');
+
+  // Changes the color of the Genre Buttons
+  GM_addStyle('.genre-buton {background: #727270a6 !important;}');
+  GM_addStyle('.genre-buton {color: #fff !important;}');
+
+  // Changes the color of Dotted Lines that seperate the Episodes
+  GM_addStyle('.cat-eps {border-bottom: 1px dashed #7e7e3e !important;}');
+
+  // Removes the Orange Glow when hovering over Episodes
+  //GM_addStyle('.cat-eps {background: #22211b !important;}');
+
+  // Changes the color of the Series and Episode Display
+  GM_addStyle('.episode-descp span {color: #97834A !important;}');
+
+  // Changes the color of the Glow that surrounds the Episodes when they are hovered over
+  GM_addStyle('.cat-eps:hover {background: #5e5642 !important;}');
+
+  // Synchronizes the Star Rating Background Color with that of the new Background's
+  GM_addStyle('div.jStar {background-image: url(https://images2.imgbox.com/97/0f/M39iGpf9_o.png) !important;}');
+
+  // Fixing the Updated Background (Changes the Color and Transparency)
+  GM_addStyle('.row {background: #181816a8 !important;}');
+  GM_addStyle('.row {border-left: solid #767658a8 2px !important;}');
+  GM_addStyle('.row {border-right: solid #767658a8 2px !important;}');
+
+  // Background Fixes
+  // Change the actual Background Color of the Ongoing & Popular Series Background
+  GM_addStyle('.sidebar-titles {background: #22211b !important;}');
+  // Change the actual Background Color of Latest 50 Releases Border
+  GM_addStyle('#sidebar_right {background-color: #22211b !important;}');
+  // Change the actual Background Color of the Genre List Borders
+  GM_addStyle('#sidebar_right3 {background-color: #22211b !important;}');
+  // Change the actual Background Color of interior of the Genre List Borders
+  GM_addStyle('.cerceve {background: #22211b !important;}');
+  // Change the actual Background Color of interior of the Genre List Hover Proper
+  GM_addStyle('.cerceve:hover {background-color: #5b626b !important;}');
+  // Change the actual Background Color of the Topmost Edge of the Recent Releases Background...
+  GM_addStyle('.sidebar-all {background-color: #22211b !important;}');
+  // Change the actual Background Color of the Synopsis Highlight that appears after selecting a series to watch
+  GM_addStyle('#sidebar_cat {background-color: #22211b !important;}');
+  // Change the actual Background Color of the Highlighted Anime Box
+  GM_addStyle('#sidebar_today {background-color: #22211b !important;}');
+
+  // Changes the Color of the Recent Releases Borders
+  GM_addStyle('.jcarousel li {border: 3px solid #1c191200 !important;}');
+
+  // Changes the Recent Releases Arrow Button Colors
+  GM_addStyle('.jcarousel-control-prev, .jcarousel-control-next {background: #242016 !important;}');
+  GM_addStyle('.jcarousel-control-prev, .jcarousel-control-next {box-shadow: 0 0 4px #b0bad1 !important;}');
+
+  // Changes the color of New Premium Gradient Bar
+  GM_addStyle('.btn-1 {background-image: linear-gradient(to right, #14130d 20%, #14130d 60%, #3e3c39 80%) !important;}');
+
+  // Changes the Color of the Information/Sorting/Filter/Categorize/Category/Categorization Boxes that are present on certain pages, such as the Subbed Anime Page
+  GM_addStyle('.ddmcc p.sep {background: #5a5959a6 !important;}');
+  GM_addStyle('.ddmcc p.sep {border: 1px solid #5a5959a6 !important;}');
+
+  // Alternate Colors for certain elements
+ // Rainfall Alternate Colors
+ //Color Value for Standard Text
+ //#878889
+
+ //Color Value for Visited Links
+ //#c1c4c7
+
+//Color Value for Dotted Lines
+//#737699
+
+/* WCO Header Universal Patch - Insert this code (without the slashes) on to a seperate file, Follow the instructions above for more assistance*/
+//(function() {
+  //'use strict';
+
+   //document.getElementsByClassName("img2")[0].src="https://images2.imgbox.com/6f/51/3qHgOWPC_o.png";
+})();
