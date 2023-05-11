@@ -115,7 +115,8 @@
   GM_addStyle('a:visited {color: #a19a6a !important;}');
 
   // Custom Background Image Patcher
-  GM_addStyle('body {background-image: url(https://images2.imgbox.com/64/31/T2A0Mt2S_o.png) !important;}');
+  GM_addStyle('body {background-image: url(https://images2.imgbox.com/3b/b1/2V73rXMR_o.png) !important;}');
+  GM_addStyle('body {background-attachment: fixed !important;}');
 
   // Changes the color of the Text seen after making a search with the "Search" Feature (classified as the "body" colors as though it's essential, but only seems to be used here)
   GM_addStyle('body {color: #d1dae7 !important;}');
@@ -142,7 +143,7 @@
   // Changes the color of the Support & Hide Ads Banner
   GM_addStyle('[href^="https://user.wco.tv/wp-login.php"] {color: white !important;}');
   GM_addStyle('[href^="https://user.wco.tv/wp-login.php"] {background: #1d212a !important;}');
-  GM_addStyle('[href^="https://user.wco.tv/wp-login.php?action=register"] {background: #22232ca6 !important;}');
+  GM_addStyle('[href^="https://user.wco.tv/wp-login.php?action=register"] {background: #22232c00 !important;}');
 
   // Changes the color for the Alternate Player Box
   GM_addStyle('#hide-cizgi-video-0  {border: 1px solid #1d2022 !important;}');
@@ -199,7 +200,7 @@
   GM_addStyle('#sidebar_today {background-color: #12151c !important;}');
 
   // Changes the Color of the Recent Releases Borders
-  GM_addStyle('.jcarousel li {border: 3px solid #12151c !important;}');
+  GM_addStyle('.jcarousel li {border: 3px solid #12151c03 !important;}');
 
   // Changes the Recent Releases Arrow Button Colors
   GM_addStyle('.jcarousel-control-prev, .jcarousel-control-next {background: #161b24 !important;}');
@@ -207,6 +208,10 @@
 
   // Changes the color of New Premium Gradient Bar
   GM_addStyle('.btn-1 {background-image: linear-gradient(to right, #0d0f14 20%, #1f232c 60%, #2d3240 80%) !important;}');
+
+  // Changes the Color of the Information/Sorting/Filter/Categorize/Category/Categorization Boxes that are present on certain pages, such as the Subbed Anime Page
+  GM_addStyle('.ddmcc p.sep {background: #7393a31c !important;}');
+  GM_addStyle('.ddmcc p.sep {border: 1px solid #7393a31c !important;}');
 
   // Alternate Colors for certain elements
  // Rainfall Alternate Colors
