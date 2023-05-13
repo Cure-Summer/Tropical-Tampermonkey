@@ -115,7 +115,7 @@
   GM_addStyle('a:visited {color: #a19a6a !important;}');
 
   // Custom Background Image Patcher
-  GM_addStyle('body {background-image: url(https://images2.imgbox.com/ea/61/50C6fEi9_o.png) !important;}');
+  GM_addStyle('body {background-image: url(https://images2.imgbox.com/c8/e0/eilhG5iP_o.png) !important;}');
 
   // Changes the color of the Text seen after making a search with the "Search" Feature (classified as the "body" colors as though it's essential, but only seems to be used here)
   GM_addStyle('body {color: #d1dae7 !important;}');
