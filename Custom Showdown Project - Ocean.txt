@@ -1,0 +1,501 @@
+// ==UserScript==
+// @name         Custom Showdown Project: Ocean
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Blue and Purple look so good together
+// @author       Cure Summer
+// @match        *://localhost.psim.us/*
+// @match        *://play.pokemonshowdown.com/*
+// @grant        GM_addStyle
+// @run-at       document-start
+// ==/UserScript==
+
+(function() {
+  'use strict';
+
+// General Background
+ GM_addStyle('.ps-room.ps-room-light {background: #232d33d9 !important;}');
+
+// Folder Information
+ GM_addStyle('.folderlistafter:before, .folderlistbefore:before {background: #3747549e !important;}');
+
+ GM_addStyle('.folderlist .foldersep:before {background: #3747549e !important;}');
+
+ GM_addStyle('folderpane h3 {background: #3747549e !important;}');
+
+// The Color for the Borders that are specifically around Folder Entries; Can be erased to allow for greater Transparency
+ GM_addStyle('.folder .selectFolder {background: #344e5ca4 !important;}');
+
+ GM_addStyle('.folder .selectFolder:hover {background: #6172cba4 !important;}');
+
+// Folder Pane Color. Is normally #777, while the Borders are incremented 1 value higher, at #888
+ GM_addStyle('.folderpane i {color: #77A !important;}');
+
+// For those thin Gray Borders. Revert to #6b6bf7 if code fails
+ GM_addStyle('.folder.cur .selectFolder, .folder.cur .selectFolder:hover, .folder.cur .selectFolder:active {border-top: 1px solid #77A !important;}');
+
+ GM_addStyle('.folder.cur .selectFolder, .folder.cur .selectFolder:hover, .folder.cur .selectFolder:active {border-bottom: 1px solid #77A !important;}');
+
+ GM_addStyle('.folder.cur .selectFolder, .folder.cur .selectFolder:hover, .folder.cur .selectFolder:active {border-left: 1px solid #77A !important;}');
+
+ GM_addStyle('folderpane h3 {border-right: 1px solid #77A !important;}');
+
+ GM_addStyle('.folderlistafter:before, .folderlistbefore:before {border-right: 1px solid #77A !important;}');
+
+ GM_addStyle('.folder .selectFolder {border-right: 1px solid #77A !important;}');
+
+ GM_addStyle('.folderlist .foldersep:before {border-right: 1px solid #77A !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+// Tab Bar Stuff
+ GM_addStyle('.maintabbarbottom {background: #344855d9 !important;}');
+
+ GM_addStyle('.maintabbarbottom {border: solid 1px #88B !important;}');
+
+// Nullifies the Borders around the Buttons without deleting the color entry. Allows for HD Resolution
+ GM_addStyle('.button {border: solid 1px #FFF0 !important;}');
+
+ GM_addStyle('.button {background: linear-gradient(to bottom,#232d3340, #435d83) !important;}');
+
+// Text Shadow. #58C may be used in the future
+ GM_addStyle('.button {text-shadow: #222 !important;}');
+
+// When the Button is being hovered over
+ GM_addStyle('.button:hover {background: linear-gradient(to bottom,#434d8340,#434da3) !important;}');
+
+ GM_addStyle('.button:hover {border-color: #3c386e !important;}');
+
+// Changes the Color of Most of the Icons
+ GM_addStyle('.button {color: #DDF !important;}');
+
+
+// The Teambuilder Button, specifically
+
+ GM_addStyle('.button.cur, .folderButton.cur, .button.cur:hover {background: linear-gradient(to bottom,#232d3340, #435d83) !important;}');
+
+ GM_addStyle('.button.cur, .folderButton.cur, .button.cur:hover {color: #DDF !important;}');
+
+ GM_addStyle('.button.cur, .folderButton.cur, .button.cur:hover {border-right: #77A !important;}');
+
+// Originally #242739a0
+ GM_addStyle('.textbox {background: #272d55a0 !important;}');
+
+ GM_addStyle('.textbox {border: 1px solid #88f !important;}');
+
+ GM_addStyle('.textbox {box-shadow: inset 0 1px 2px #2374ab, 1px 1px 0 rgb(144 168 185 / 68%) !important;}');
+
+// For the Bubbles containing the Pokemon
+
+ GM_addStyle('.select, .team {border-shadow: #77A !important;}');
+
+ GM_addStyle('.select, .team {background: linear-gradient(to bottom,#434d8340,#53599fc7) !important;}');
+
+ GM_addStyle('.select, .team {color: #AADB !important;}');
+
+ GM_addStyle('.select:hover, team.team-hover {background: linear-gradient(to bottom,#434d8340,#53599fc7) !important;}');
+
+
+// More Text Corrections
+ GM_addStyle('.ps-room.ps-room-light {color: #DDF !important;}');
+
+ GM_addStyle('.folderpane h3 {color: #DDF !important;}');
+
+ GM_addStyle('.folder .selectFolder {color: #DDF !important;}');
+
+ GM_addStyle('.folder.cur .selectFolder, .folder.cur .selectFolder:hover, .folder.cur .selectFolder:active {color: #DDF !important;}');
+
+// Miscellaneous Hover Box Corrections (For the Edit Button; Delete Button; etc.)
+
+ GM_addStyle('.setmenu button:hover, .teamlist button:hover {border-color: linear-gradient(to bottom,#232d3340, #435d83) !important;}');
+
+ GM_addStyle('.setmenu button:hover, .teamlist button:hover {border-color: #3c386e !important;}');
+
+// Attempted Misc Button Fix
+
+ GM_addStyle('button {color: #DDF !important;}');
+
+// Miscellaneous Highlighted Text at the Bottom of the Teambuilder Page
+
+ GM_addStyle('code, .code, .spoiler:hover code, .spoiler:active code, .spoiler-shown code {backgroudn: #DDF8 !important;}');
+
+ GM_addStyle('code, .code, .spoiler:hover code, .spoiler:active code, .spoiler-shown code {border-right: #77A !important;}');
+
+// Inside of the actual Teambuilder
+
+
+ GM_addStyle('.setchart label, .setchart-nickname label {color: #DDF !important;}');
+
+// EVs Text Bar
+
+ GM_addStyle('.utilichart h3, .dexentry h3, .resultheader h3 {background: #4d667fa8 !important;}');
+
+ GM_addStyle('.utilichart h3, .dexentry h3, .resultheader h3 {border: 1px solid #6e7a87a8 !important;}');
+
+ GM_addStyle('.utilichart h3, .dexentry h3, .resultheader h3 {border-right: #77A !important;}');
+
+ GM_addStyle('.utilichart h3, .dexentry h3, .resultheader h3 {box-shadow: inset 1px 1px 0 rgb(15 15 16 / 0%) !important;}');
+
+// Originally #68f7
+ GM_addStyle('.textbox:hover {background: #24b7 !important;}');
+
+ GM_addStyle('.textbox {color: #ddf !important;}');
+
+// The Chart Containing the Image of the Pokemon, and their Basic Information
+// Original Entry:  GM_addStyle('.setchart {background: #3a5065c4 no-repeat scroll 10px 5px none !important;}');
+// This specific entry must be handled carefully, as making the wrong changes will cause the Pokemon images to disappear
+ GM_addStyle('.setchart {background: #3a5065c4;}');
+
+ GM_addStyle('.setdetails, .setstats {border: 1px solid #605bb3 !important;}');
+
+ GM_addStyle('.setdetails, .setstats {border-shadow: inset 0 1px 2px #8ba3c5, 1px 1px 0 rgb(129 148 189 / 60%) !important;}');
+
+ GM_addStyle('.setdetails, .setstats {background: #365c75bd !important;}');
+
+ GM_addStyle('.setchart-nickname {background: #426f9be6 !important;}');
+
+ GM_addStyle('.setchart {border: #7182ed9e !important;}');
+
+ GM_addStyle('.setchart {box-shadow: inset 1px 1px 0 rgb(128 146 167 / 60%) !important;}');
+
+ GM_addStyle('.ps-popup {background: #7ea8cea8 !important;}');
+
+ GM_addStyle('.teambar button:hover {background: #869ec5ba !important;}');
+
+ GM_addStyle('.teambar button {background: #495689a3 !important;}');
+
+ GM_addStyle('.teambar button {color: #DDF !important;}');
+
+ GM_addStyle('.teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {color: #DDF !important;}');
+
+ GM_addStyle('.teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {background: #495689a3 !important;}');
+
+ GM_addStyle('.teambarbutton {border: 1px solid #88c4 !important;}');
+
+ GM_addStyle('.teambar button:disabled, .teambar button:disabled:hover, .teambar button:disabled:active {border: #88f2 !important;}');
+
+
+// Tiering Table. Includes Tier, Stats, Abilities, etc.
+
+// Tier
+ GM_addStyle('.utilichart .numcol {color: #ddf !important;}');
+
+// Pokemon
+ GM_addStyle('.utilichart .pokemonnamecol {color: #ddf !important;}');
+
+// Abilities and Stats
+ GM_addStyle('.utilichart .col {color: #ddf !important;}');
+
+// Large Tier Categorization Heading
+ GM_addStyle('.utilichart h3, .dexentry h3, .resultheader h3 {color: #ddf !important;}');
+
+ GM_addStyle('.utilichart h3, .dexentry h3, .resultheader h3 {text-shadow: 1px 1px 0 rgb(10 10 10 / 60%) !important;}');
+
+// Random Stuff
+
+// Text Box. Also considered rgb(50 71 83 / 50%)
+ GM_addStyle('.chat-log {background: rgb(14 25 31 / 32%) !important;}');
+
+// Overlay Effect when Logging in, or receiving certain Message
+ GM_addStyle('.ps-overlay {background: rgb(57 64 93 / 50%) !important;}');
+
+ GM_addStyle('.textbox:focus, .button:focus {border-color: #048 !important;}');
+
+ GM_addStyle('.textbox-hover {background: #68f6 !important;}');
+
+// Users Online Textbox when Hovered Upon
+ GM_addStyle('.userlist-minimized .userlist-count:hover, .userlist-maximized .userlist-count:hover, .pm-buttonbar button:hover {background: #374d63 !important;}');
+
+ GM_addStyle('.userlist-maximized {background: #2a455ac7 !important;}');
+
+// Format Selector Information
+ GM_addStyle('.select:hover, .team.team-hover {background: linear-gradient(to bottom,#434d8340,#4a59a3) !important;}');
+
+ GM_addStyle('.popupmenu button {color: #ddf !important;}');
+
+ GM_addStyle('.chat-log {color: #ddf !important;}');
+
+// Fixes the Light Mode Header
+ GM_addStyle('.header {background: rgb(34 43 73 / 48%) !important;}');
+
+ GM_addStyle('.select, .team {box-shadow: inset 0 1px 0 #244 !important;}');
+
+ GM_addStyle('.challenge {background: #b3c2fc !important;}');
+
+ GM_addStyle('.challenge {border: #5e71bd !important;}');
+
+ GM_addStyle('.challenge {color: #3c4d8f !important;}');
+
+ GM_addStyle('.unread {background: rgb(130 237 255 / 33%) !important;}');
+
+// Battle Opacity Fix
+ GM_addStyle('.ps-room.ps-room-opaque, .battle-log-add, .battle-controls {background: #4448 !important;}');
+
+ GM_addStyle('.ps-room.ps-room-opaque {color: #ddf !important;}');
+
+ GM_addStyle('.folderpane h3 {background: #344b5dd0 !important;}');
+
+ GM_addStyle('.folderpane {border-left: #344b5da6 !important;}');
+
+ GM_addStyle('.button {box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 2px #88a !important;}');
+
+ GM_addStyle('.button {text-shadow: #000 !important;}');
+
+// Notification Boxes
+ GM_addStyle('.pm-log {background: rgb(47 100 131 / 93%) !important;}');
+
+ GM_addStyle('.pm-log {border: 1px solid #46aa !important;}');
+
+ GM_addStyle('.pm-window h3 {background: rgb(197 234 249 / 81%) !important;}');
+
+ GM_addStyle('.pm-window h3 {color: #555 !important;}');
+
+ GM_addStyle('.pm-log {color: #ddf !important;}');
+
+ GM_addStyle('.userlist-minimized {background: #0b102bb3 !important;}');
+
+ GM_addStyle('code, .code, .spoiler:hover code, .spoiler:active code, .spoiler-shown code {border: 1px solid #777c !important;}');
+
+ GM_addStyle('code, .code, .spoiler:hover code, .spoiler:active code, .spoiler-shown code {background: #222c !important;}');
+
+ GM_addStyle('code, .code, .spoiler:hover code, .spoiler:active code, .spoiler-shown code {color: #ddf !important;}');
+
+ GM_addStyle('.battle-controls .whatdo {color: #ddf !important;}');
+
+
+// Stubborn Battle Code.
+ GM_addStyle('.allyparty button, .switchmenu button, .movemenu button {background: linear-gradient(to bottom,#232d3340, #435d83) !important;}');
+
+ GM_addStyle('.allyparty button, .switchmenu button, .movemenu button {color: #ddf !important;}');
+
+ GM_addStyle('.allyparty button, .switchmenu button, .movemenu button {text-shadow: 0 1px 0 rgb(0 0 0 / 40%) !important;}');
+
+ GM_addStyle('.allyparty button, .switchmenu button, .movemenu button {box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 2px #7f8badba !important;}');
+
+ GM_addStyle('.allyparty button.disabled, .allyparty button:disabled, .switchmenu button.disabled, .switchmenu button:disabled, .movemenu button:disabled {background: #61718fe3 !important;}');
+
+ GM_addStyle('.allyparty button.disabled, .allyparty button:disabled, .switchmenu button.disabled, .switchmenu button:disabled, .movemenu button:disabled {color: #ddf !important;}');
+
+ GM_addStyle('.ps-room .battle-controls {background: #6f91bb0f !important;}');
+
+ GM_addStyle('body {color: #ddf;}');
+
+ GM_addStyle('.battle-log {background: #222c !important;}');
+
+ GM_addStyle('.battle-log {color: #ddf !important;}');
+
+ GM_addStyle('.battle-log-add {background: #444c !important;}');
+
+ GM_addStyle('.battle-log-add {color: #ddf !important;}');
+
+ GM_addStyle('.message-log h2 {background: #6492a58a !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+
+// In-Battle Type Bubbles
+
+// Bug
+
+ GM_addStyle('.movemenu button.type-Bug {background: linear-gradient(to bottom,hsl(66deg 42% 97% / 25%),hsl(66deg 42% 84% / 52%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Bug:hover {background: linear-gradient(to bottom,hsl(66deg 42% 94% / 44%),hsl(66deg 61.44% 75.88% / 85%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Bug small {color: #e2ef65 !important;}');
+
+// Dark
+
+ GM_addStyle('.movemenu button.type-Dark {background: linear-gradient(to bottom,hsl(234.74deg 18% 97% / 45%),hsl(246.98deg 8.36% 24.11% / 38%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Dark:hover {background: linear-gradient(to bottom,hsl(234.74deg 38.19% 8.08% / 45%),hsl(0deg 80.41% 43.29% / 63%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Dark small {color: #dfe2e9 !important;}');
+
+
+// Dragon
+
+ GM_addStyle('.movemenu button.type-Dragon {background: linear-gradient(to bottom,hsl(257deg 39% 97% / 46%),hsl(257deg 51.28% 51.82% / 44%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Dragon:hover {background: linear-gradient(to bottom,hsl(243.04deg 87.53% 63.29% / 46%),hsl(186.06deg 74.49% 78.97% / 77%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Dragon small {color: #d8cef1 !important;}');
+
+
+// Electric
+
+ GM_addStyle('.movemenu button.type-Electric {background: linear-gradient(to bottom,hsl(48deg 57.22% 67.22% / 73%),hsl(188.83deg 65.2% 80.06% / 84%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Electric:hover {background: linear-gradient(to bottom,hsl(48deg 46.48% 6.55% / 52%),hsl(188.83deg 64.72% 53.55% / 66%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Electric small {color: #cae2e0 !important;}');
+
+
+// Fairy
+
+ GM_addStyle('.movemenu button.type-Fairy {background: linear-gradient(to bottom,hsl(310deg 41% 97% / 53%),hsl(310deg 75.66% 84.43% / 63%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Fairy:hover {background: linear-gradient(to bottom,hsl(337.2deg 81.18% 54.77% / 64%),hsl(136.21deg 60.91% 52.04% / 48%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Fairy small {color: #f1e7f0 !important;}');
+
+
+// Fighting
+
+ GM_addStyle('.movemenu button.type-Fighting {background: linear-gradient(to bottom,hsl(3deg 59.87% 86.63% / 45%),hsl(3deg 58.36% 47.83% / 50%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Fighting:hover {background: linear-gradient(to bottom,hsl(3deg 72.76% 80.31% / 52%),hsl(3deg 74.97% 47.79% / 65%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Fighting small {color: #f5b1ae !important;}');
+
+
+// Fire
+
+ GM_addStyle('.movemenu button.type-Fire {background: linear-gradient(to bottom,hsl(21.5deg 88.84% 58.97% / 63%),hsl(0deg 51.76% 74.19% / 75%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Fire:hover {background: linear-gradient(to bottom,hsl(207.04deg 88.84% 58.97% / 63%),hsl(0deg 79.07% 63.08% / 75%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Fire small {color: #f3e4e0 !important;}');
+
+
+// Flying
+
+ GM_addStyle('.movemenu button.type-Flying {background: linear-gradient(to bottom,hsl(255deg 20% 97% / 62%),hsl(255deg 20% 84% / 65%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Flying:hover {background: linear-gradient(to bottom,hsl(51.97deg 10.89% 95.75% / 62%),hsl(213.75deg 68.48% 58% / 82%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Flying small {color: #ffffff !important;}');
+
+// Ghost
+
+ GM_addStyle('.movemenu button.type-Ghost {background: linear-gradient(to bottom,hsl(262deg 54.05% 78.05% / 57%),hsl(262deg 41.97% 51.4% / 63%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Ghost:hover {background: linear-gradient(to bottom,hsl(262deg 87.25% 76.46% / 62%),hsl(262deg 76.3% 15.72% / 63%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Ghost small {color: #d5c9ec !important;}');
+
+// Grass
+
+ GM_addStyle('.movemenu button.type-Grass {background: linear-gradient(to bottom,hsl(100deg 59.16% 88.79% / 54%),hsl(100deg 84.98% 64.28% / 58%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Grass:hover {background: linear-gradient(to bottom,hsl(100deg 60.15% 64.81% / 85%),hsl(28.21deg 74.31% 29.9% / 82%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Grass small {color: #e2f2da !important;}');
+
+// Ground
+
+ GM_addStyle('.movemenu button.type-Ground {background: linear-gradient(to bottom,hsl(35.35deg 47.41% 35.35% / 62%),hsl(33.75deg 58.8% 23.4% / 78%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Ground:hover {background: linear-gradient(to bottom,hsl(21.5deg 50.76% 49.19% / 82%),hsl(25.44deg 86.96% 14.82% / 70%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Ground small {color: #bbaa9a !important;}');
+
+// Ice
+
+ GM_addStyle('.movemenu button.type-Ice {background: linear-gradient(to bottom,hsl(180deg 63.59% 65.81% / 62%),hsl(180deg 28.9% 50.38% / 70%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Ice:hover {background: linear-gradient(to bottom,hsl(180deg 10.51% 97.53% / 72%),hsl(180deg 69.85% 39.96% / 86%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Ice small {color: #d9efef !important;}');
+
+// Normal
+
+ GM_addStyle('.movemenu button.type-Normal {background: linear-gradient(to bottom,hsl(215.35deg 13.77% 66.39% / 61%),hsl(216.52deg 12.34% 64.24%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Normal:hover {background: linear-gradient(to bottom,hsl(215.35deg 19.41% 82.6% / 78%),hsl(216.52deg 16.26% 85.13% / 83%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Normal small {color: #ffffff !important;}');
+
+// Poison
+ GM_addStyle('.movemenu button.type-Poison {background: linear-gradient(to bottom,hsl(267.97deg 66.91% 76.47% / 11%),hsl(280.21deg 70.18% 50.12% / 63%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Poison:hover {background: linear-gradient(to bottom,hsl(267.97deg 77.44% 62.26% / 44%),hsl(150.06deg 51.05% 14.17% / 78%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Poison small {color: #e6c2e6 !important;}');
+
+
+// Psychic
+ GM_addStyle('.movemenu button.type-Psychic {background: linear-gradient(to bottom,hsl(342deg 33% 97% / 11%),hsl(342deg 39.8% 78.01% / 48%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Psychic:hover {background: linear-gradient(to bottom,hsl(342deg 33% 97% / 11%),hsl(342deg 54.98% 74.09% / 68%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Psychic small {color: #f76491 !important;}');
+
+
+// Rock
+ GM_addStyle('.movemenu button.type-Rock {background: linear-gradient(to bottom,hsl(46.43deg 36.31% 57.17% / 39%),hsl(47.6deg 26.04% 59.93% / 63%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Rock:hover {background: linear-gradient(to bottom,hsl(46.43deg 23.96% 57.74% / 51%),hsl(47.6deg 30.04% 65.32% / 88%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Rock small {color: #f5ecc2 !important;}');
+
+
+// Steel
+ GM_addStyle('.movemenu button.type-Steel {background: linear-gradient(to bottom,hsl(223.66deg 33.09% 78.18% / 57%),hsl(241.44deg 27.37% 78.81%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Steel:hover {background: linear-gradient(to bottom,hsl(223.66deg 16.76% 69.91% / 83%),hsl(241.44deg 27.81% 84.93%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Steel small {color: #dedef4 !important;}');
+
+// Water
+ GM_addStyle('.movemenu button.type-Water {background: linear-gradient(to bottom,hsl(193.2deg 64.68% 39.78% / 63%),hsl(213.75deg 44.02% 31.27% / 75%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Water:hover {background: linear-gradient(to bottom,hsl(215.35deg 46.02% 45.94% / 63%),hsl(244.21deg 51.54% 24% / 75%)) !important;}');
+
+ GM_addStyle('.movemenu button.type-Water small {color: #b3c9fd !important;}');
+
+
+// The Background Layout
+
+ GM_addStyle('body {background: #344b6c url(https://images2.imgbox.com/65/12/yj7OvSXb_o.png) no-repeat left center fixed !important;}');
+
+// Highlighter Glow for Pokedex Info
+ GM_addStyle('.teambuilder-results .result a:hover, .teambuilder-results .result a.hover {background: #4a4b6d87 !important;}');
+
+// Modifies the shadow behind the "Pokemon" label in the Teambuilder
+ GM_addStyle('.setcol-icon label {text-shadow: #dae5f000 1px 1px 0, #dae5f000 1px -1px 0, #dae5f000 -1px 1px 0, #dae5f000 -1px -1px 0 !important;}');
+
+
+// PM Button Bar
+ GM_addStyle('.pm-buttonbar bar {background: #556b7b !important;}');
+
+// Highlighted Bar when hovering over Player Names
+ GM_addStyle('.userlist li button:hover {background: #131a4dbd !important;}');
+
+// The Outside Bar surrounding the Messaging Bar in the PM Box
+ GM_addStyle('.pm-log-add {background: rgb(132 180 209 / 85%) !important;}');
+
+// Attempting to change the various stubborn White Buttons
+ GM_addStyle('button {background-color: #5a83a103 !important;}');
+
+// This particular code modifies the borders surrounding certain entry fields, such as the Selectable Formats...
+// ...when challenging a Player. It does, in fact, possess a modified Color Value, but has been nullified for...
+// ...aesthetic purposes.
+ GM_addStyle('button {border-color: #91bddd00 !important;}');
+
+// Chat Room Color Fixes
+ GM_addStyle('.roomlist a.ilink {background: rgb(84 105 168 / 50%) !important;}');
+
+ GM_addStyle('.roomlist a.ilink {color: #ddf !important;}');
+
+ GM_addStyle('.roomlist a.ilink {text-shadow: #000 0 -1px 0 !important;}');
+
+ GM_addStyle('.roomlist a.ilink:hover {background: #6894afad !important;}');
+
+ GM_addStyle('.roomlist a.ilink:hover {color: #ddf !important;}');
+
+ GM_addStyle('.popupmenu button:hover, .popupmenu button.sel:hover {background: #131a4dbd !important;}');
+
+// Changes those stubborn gray borders around the players' usernames. It appears during Battles, and possibly elsewhere.
+ GM_addStyle('.userlist li {border-bottom 1px solid #44c !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+
+
+})();
