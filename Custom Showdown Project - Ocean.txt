@@ -474,7 +474,8 @@
 // This particular code modifies the borders surrounding certain entry fields, such as the Selectable Formats...
 // ...when challenging a Player. It does, in fact, possess a modified Color Value, but has been nullified for...
 // ...aesthetic purposes.
- GM_addStyle('button {border-color: #91bddd00 !important;}');
+// Update: As of current, the Transparency has been removed. To restore it, simply add "00" to the end of the code
+ GM_addStyle('button {border-color: #556e81 !important;}');
 
 // Chat Room Color Fixes
  GM_addStyle('.roomlist a.ilink {background: rgb(84 105 168 / 50%) !important;}');
@@ -490,7 +491,7 @@
  GM_addStyle('.popupmenu button:hover, .popupmenu button.sel:hover {background: #131a4dbd !important;}');
 
 // Changes those stubborn gray borders around the players' usernames. It appears during Battles, and possibly elsewhere.
- GM_addStyle('.userlist li {border-bottom 1px solid #44c !important;}');
+ GM_addStyle('.userlist li {border-bottom: 1px solid #44c !important;}');
 
  GM_addStyle('emptyspaces {border-right: #77A !important;}');
 
