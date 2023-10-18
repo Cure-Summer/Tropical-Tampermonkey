@@ -418,11 +418,11 @@
 
 
 // Psychic
- GM_addStyle('.movemenu button.type-Psychic {background: linear-gradient(to bottom,hsl(342deg 33% 97% / 11%),hsl(342deg 39.8% 78.01% / 48%)) !important;}');
+ GM_addStyle('.movemenu button.type-Psychic {background: linear-gradient(to bottom,hsl(342deg 46.42% 87.35% / 49%),hsl(342deg 30.27% 49.8% / 78%)) !important;}');
 
- GM_addStyle('.movemenu button.type-Psychic:hover {background: linear-gradient(to bottom,hsl(342deg 33% 97% / 11%),hsl(342deg 54.98% 74.09% / 68%)) !important;}');
+ GM_addStyle('.movemenu button.type-Psychic:hover {background: linear-gradient(to bottom,hsl(342deg 27.86% 69.64% / 62%),hsl(280.21deg 38.95% 55.1% / 92%)) !important;}');
 
- GM_addStyle('.movemenu button.type-Psychic small {color: #f76491 !important;}');
+ GM_addStyle('.movemenu button.type-Psychic small {color: #e1c4ec !important;}');
 
 
 // Rock
