@@ -5,6 +5,8 @@
 // @description  You Love Blue And You Know It's True!
 // @author       Cure Summer
 // @match        *://www.wcofun.com/*
+// @match        *://www.wcofun.org/*
+// @match        *://www.wcofun.tv/*
 // @grant        none
 // @run-at       start
 // ==/UserScript==
