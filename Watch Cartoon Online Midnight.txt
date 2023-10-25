@@ -5,6 +5,8 @@
 // @description  Ethereal and Celestial!
 // @author       Cure Summer
 // @match        *://www.wcofun.com/*
+// @match        *://www.wcofun.org/*
+// @match        *://www.wcofun.tv/*
 // @grant        GM_addStyle
 // @run-at       document-start
 // ==/UserScript==
@@ -167,6 +169,8 @@
 
   // Changes the color of the Glow that surrounds the Episodes when they are hovered over
   GM_addStyle('.cat-eps:hover {background: #5e5031 !important;}');
+  //Lighter Alternative for the Episode Glow
+  //GM_addStyle('.cat-eps:hover {background: #444139 !important;}');
 
   // Synchronizes the Star Rating Background Color with that of the new Background's
   GM_addStyle('div.jStar {background-image: url(https://images2.imgbox.com/2a/15/fk63NnIt_o.png) !important;}');
