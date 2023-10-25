@@ -145,7 +145,7 @@
 // The Chart Containing the Image of the Pokemon, and their Basic Information
 // Original Entry:  GM_addStyle('.setchart {background: #3a5065c4 no-repeat scroll 10px 5px none !important;}');
 // This specific entry must be handled carefully, as making the wrong changes will cause the Pokemon images to disappear
- GM_addStyle('.setchart {background: #3a5065c4;}');
+ GM_addStyle('.setchart {background: #3a5065c4 no-repeat scroll 10px 5px none;}');
 
  GM_addStyle('.setdetails, .setstats {border: 1px solid #605bb3 !important;}');
 
@@ -491,14 +491,17 @@
 // Update: As of current, the Transparency has been removed. To restore it, simply add "00" to the end of the code
  GM_addStyle('button {border-color: #556e81 !important;}');
 
-// Chat Room Color Fixes
- GM_addStyle('.roomlist a.ilink {background: rgb(84 105 168 / 50%) !important;}');
+// Chat Room Color Fixes (Originally rgb(84 105 168 / 50%)
+ GM_addStyle('.roomlist a.ilink {background: linear-gradient(to bottom,#232d3340, #435d83) !important;}');
+
+ GM_addStyle('.roomlist a.ilink {border: 1px solid #bcd4 !important;}');
 
  GM_addStyle('.roomlist a.ilink {color: #ddf !important;}');
 
  GM_addStyle('.roomlist a.ilink {text-shadow: #000 0 -1px 0 !important;}');
 
- GM_addStyle('.roomlist a.ilink:hover {background: #6894afad !important;}');
+// Originally #6894afad
+ GM_addStyle('.roomlist a.ilink:hover {background: linear-gradient(to bottom,#57778b40, #6f97d3eb) !important;}');
 
  GM_addStyle('.roomlist a.ilink:hover {color: #ddf !important;}');
 
@@ -536,6 +539,32 @@
 
  GM_addStyle('.popupmenu button.folderButtonOpen {box-shadow: 0 1px 2px rgba(0,0,0,.2), inset 0 -1px 2px #3358 !important;}');
 
+// Mega Evo Button
+ GM_addStyle('.megaevo {background: linear-gradient(to bottom,#232d3340, #435d83);}');
+
+ GM_addStyle('.movemenu label {color: #ddf !important;}');
+
+ GM_addStyle('.megaevo {color: #ddf !important;}');
+
+// Basal Highlight Bar Color for Pokedex
+ GM_addStyle('.teambuilder-results .result a.cur {background: rgb(128 147 192 / 58%) !important;}');
+
+// The Error Color when attempting to enter an invalid entry in the Teambuilder
+ GM_addStyle('.setchart input.incomplete {color: #b7b !important;}');
+
+ GM_addStyle('.setchart input.incomplete {border-color: #a2a3 !important;}');
+
+// Custom Highlighted Background for the Error Color Text
+ GM_addStyle('.setchart input.incomplete {background: #a2a3 !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
  GM_addStyle('emptyspaces {border-right: #77A !important;}');
 
  GM_addStyle('emptyspaces {border-right: #77A !important;}');
@@ -546,5 +575,12 @@
 
  GM_addStyle('emptyspaces {border-right: #77A !important;}');
 
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
+
+ GM_addStyle('emptyspaces {border-right: #77A !important;}');
 
 })();
