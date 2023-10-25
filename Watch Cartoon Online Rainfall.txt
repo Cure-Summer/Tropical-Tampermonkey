@@ -5,6 +5,8 @@
 // @description  Ethereal and Beautiful!
 // @author       Cure Summer, Rain Background Authors
 // @match        *://www.wcofun.com/*
+// @match        *://www.wcofun.org/*
+// @match        *://www.wcofun.tv/*
 // @grant        GM_addStyle
 // @run-at       document-start
 // ==/UserScript==
