@@ -1,0 +1,25 @@
+// ==UserScript==
+// @name         Watch Cartoon Online Ad Text Patcher
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Tropical Shine!
+// @author       Cure Summer
+// @match        *://www.wcofun.com/*
+// @match        *://www.wcofun.org/*
+// @match        *://www.wcofun.tv/*
+// @grant        GM_addStyle
+// @run-at       document-start
+// ==/UserScript==
+
+(function() {
+  'use strict';
+
+/* Just a quick Script to remove the "Report" and "Click to Remove Ads" Buttons!*/
+/* Please note that this is not an Ad Blocker. It is best used in conjunction with any specialized Ad-Blocker designed for WatchCartoonOnline, specifically*/
+/* Now kick back, relax, watch some Precure, and Tropical-Shine!*/
+
+// Eliminates the "Report" and "Remove Ads" Buttons, as though Adblock was active
+  GM_addStyle('.anti-ad {display: none !important;}');
+
+  GM_addStyle('.anti-ad a {display: none !important;}');
+})();
