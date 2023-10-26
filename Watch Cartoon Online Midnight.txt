@@ -96,6 +96,9 @@
   // General Entries Color Modifier (Caution: This one may cause functionality issues with the rest of the site)
   GM_addStyle('a {color: #898787 !important;}');
 
+  // Changes the Color of the so-called "Anti-Ad" Borders
+  GM_addStyle('.anti-ad {border-color: #898787 !important;}');
+
   // Forces the Header Text to be white to rectify the issues with the "a" color code
   GM_addStyle('.header-top a {color: #fff !important;}');
   GM_addStyle('.header-top a:visited {color: #fff !important;}');
