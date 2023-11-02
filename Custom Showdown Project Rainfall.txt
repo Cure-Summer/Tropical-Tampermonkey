@@ -623,7 +623,7 @@
 
  GM_addStyle('.hp-red {background: #961c039a !important;}');
 
- GM_addStyle('.hp-red {border-bottom-color: #961c039a !importanta;}');
+ GM_addStyle('.hp-red {border-bottom-color: #961c039a !important;}');
 
  GM_addStyle('.hp-red {border-right-color: #961c039a !important;}');
 
