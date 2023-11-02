@@ -647,11 +647,12 @@
 // Color for the Stat Drop Box
  GM_addStyle('.statbar span.bad {background: #a36559;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// Color for the Neutral Status Box. Mainly used for Volatile Statuses, especially Custom ones
+ GM_addStyle('.statbar span.bad {background: #4473b47a;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+ GM_addStyle('.statbar span.bad {color: #242f72;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+ GM_addStyle('.statbar span.bad {border-color: #1c5380;}');
 
  GM_addStyle('emptyspaces {border-right: #77A !important;}');
 
