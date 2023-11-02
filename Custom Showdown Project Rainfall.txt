@@ -547,7 +547,10 @@
  GM_addStyle('.megaevo {color: #ddf !important;}');
 
 // Basal Highlight Bar Color for Pokedex
- GM_addStyle('.teambuilder-results .result a.cur {background: rgb(128 147 192 / 58%) !important;}');
+ GM_addStyle('.teambuilder-results .result a.cur {background: rgb(70 95 155 / 58%) !important;}');
+
+// Changes the Border Color for the aforementioned Bar
+ GM_addStyle('.teambuilder-results .result a.cur {border-color: #222b4f59 !important;}');
 
 // The Error Color when attempting to enter an invalid entry in the Teambuilder
  GM_addStyle('.setchart input.incomplete {color: #b7b !important;}');
@@ -557,21 +560,92 @@
 // Custom Highlighted Background for the Error Color Text
  GM_addStyle('.setchart input.incomplete {background: #a2a3 !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// Changes the color for a number of entries, including the Pokedex Stat Markers, and BST Text, originally #a1ad49
+// Another alternative color is #49ada5
+ GM_addStyle('.utilichart .labelcol em, .utilichart .widelabelcol em, .utilichart .pplabelcol em, .utilichart .statcol em, .utilichart .bstcol em {color: #6885db !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// Changes the color of the Bookmark Stars
+ GM_addStyle('.popupmenu i {color: #e7e69d !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// The Bubble behind the Loading Message seen when initializing the App
+ GM_addStyle('.mainmessage {background: linear-gradient(to bottom,#91c1dd69, #435d83) !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// The Color of the Loading Text, originally #c3b96d
+ GM_addStyle('.mainmessage {color: #a8a9e5 !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// The Border Color for the various Pop-Up Messages, including the Failure to Initialize Message
+ GM_addStyle('.ps-popup {box-shadow: inset 1px 1px 0 #6e8fa1, inset -1px -1px 0 #9bb6c1, 2px 2px 3px rgba(0,0,0,.2) !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// Color for the "seeking" Screen
+ GM_addStyle('.seeking {background: #013c !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// Possible Health Bar Color; Not currently in use, but may place it over the Background value: #0093bba8
+ GM_addStyle('.seeking {color: #ccd !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// Changes the Ability Bar Color
+ GM_addStyle('.abilityresult strong {background: linear-gradient(to bottom,#354f5f40, #6f9fe5) !important;}');
+
+ GM_addStyle('.abilityresult strong {border-radius: 100 !important;}');
+
+ GM_addStyle('.abilityresult strong {padding: 3px 8px !important;}');
+
+// Changes the Color of the Borders around the Hp Bar
+ GM_addStyle('.statbar .hpbar {border: 1px solid #0706358a !important;}');
+
+ GM_addStyle('.statbar .hpbar {background: #0706358a !important;}');
+
+ GM_addStyle('.hptext {background: #202 !important;}');
+
+ GM_addStyle('.hptext {color: #ccc !important;}');
+
+ GM_addStyle('.hptextborder {border-top: 1px solid #202 !important;}');
+
+ GM_addStyle('.hptextborder {border-bottom: 1px solid #202 !important;}');
+
+// Changes the Color of the Hp Bar, itself
+ GM_addStyle('.hp {border-top: 2px solid #0093bb9a !important;}');
+
+ GM_addStyle('.hp {background: #0093bb9a !important;}');
+
+ GM_addStyle('.hp {border-bottom: 2px solid #0093bb9a !important;}');
+
+ GM_addStyle('.hp {border-right: 1px solid #0093bb9a !important;}');
+
+ GM_addStyle('.hp-yellow {border-top-color: #f5d5389c !important;}');
+
+ GM_addStyle('.hp-yellow {background: #f5d5389a !important;}');
+
+ GM_addStyle('.hp-yellow {border-bottom-color: #f5d5389a !important;}');
+
+ GM_addStyle('.hp-yellow {border-right-color: #f5d5389a !important;}');
+
+ GM_addStyle('.hp-red {border-top-color: #961c039a !important;}');
+
+ GM_addStyle('.hp-red {background: #961c039a !important;}');
+
+ GM_addStyle('.hp-red {border-bottom-color: #961c039a !importanta;}');
+
+ GM_addStyle('.hp-red {border-right-color: #961c039a !important;}');
+
+// Color for the Hp Bar Afterimages
+ GM_addStyle('.prevhp {background: #3079956e !important;}');
+
+ GM_addStyle('.prevhp-yellow {background-color: #ab92156e !important;}');
+
+ GM_addStyle('.prevhp-red {background-color: #6219096e !important;}');
+
+// Color for the Stat Boost Box
+ GM_addStyle('.statbar span.good {background: #8db585b8 !important;}');
+
+ GM_addStyle('.statbar span.good {color: #e9f2e5 !important;}');
+
+ GM_addStyle('.statbar span.good {border-color #3a05 !important;}');
+
+// Modifies some of the Attributes behind the "Turn" Box
+ GM_addStyle('.turn {background: #cfb85f70 !important;}');
+
+// Color for the Stat Drop Box
+ GM_addStyle('.statbar span.bad {background: #a36559;}');
 
  GM_addStyle('emptyspaces {border-right: #77A !important;}');
 
