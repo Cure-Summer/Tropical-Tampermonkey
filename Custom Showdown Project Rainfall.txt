@@ -667,9 +667,10 @@
 // Theoretically, a fix to the perpetually highlighted Battle Display Boxes, but not in practice
  //GM_addStyle('.button.cur:hover {background: linear-gradient(to bottom,#232d3340, #435d83) !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// Pesky Category Sorter Bar Colors
+ GM_addStyle('.utilichart .sortrow {background: #4c628494 !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+ GM_addStyle('.utilichart .sortrow {border-bottom: 1px solid #2b3851ba !important;}');
 
  GM_addStyle('emptyspaces {border-right: #77A !important;}');
 
