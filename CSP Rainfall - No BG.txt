@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Custom Showdown Project: Rainfall
+// @name         Custom Showdown Project: Rainfall (No Background)
 // @namespace    http://tampermonkey.net/
 // @version      1.0
 // @description  Blue and Purple look so good together
@@ -16,6 +16,9 @@
 /* A Custom Layout to make Pokemon Showdown just a little bit more Tropical!*/
 /* Initially, this experiment begun as a remedy to my inability to open the Settings Menu on a certain Browser!*/
 /* Not only has the aforementioned issue been solved, but I seemingly gained something out of it, too!*/
+/* This version automatically nullifies the preset Background, to allow for users to insert their own.*/
+/* It is recommended to use the one with the Preset Background, if you cannot open the Setting Menu, for some reason.*/
+/* For most users, however, this version will be more efficient, and will likely be the Template, moving forward.*/
 /* Now kick back, relax, watch some Tropical Rouge Precure, and get out there and Tropical Shine!*/
 
 // General Background
@@ -469,7 +472,7 @@
 
 // The Background Layout
 
- GM_addStyle('body {background: #344b6c url(https://images2.imgbox.com/65/12/yj7OvSXb_o.png) no-repeat left center fixed !important;}');
+ //GM_addStyle('body {background: #344b6c url(https://images2.imgbox.com/65/12/yj7OvSXb_o.png) no-repeat left center fixed !important;}');
 
 // Highlighter Glow for Pokedex Info
  GM_addStyle('.teambuilder-results .result a:hover, .teambuilder-results .result a.hover {background: #4a4b6d87 !important;}');
