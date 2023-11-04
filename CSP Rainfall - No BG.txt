@@ -675,7 +675,7 @@
 
  GM_addStyle('.utilichart .sortrow {border-bottom: 1px solid #2b3851ba !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+ GM_addStyle('.utilichart .sortcol:hover {background: #6486bb94 !important;}');
 
  GM_addStyle('emptyspaces {border-right: #77A !important;}');
 
