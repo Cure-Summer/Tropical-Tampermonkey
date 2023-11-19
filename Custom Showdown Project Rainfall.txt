@@ -647,7 +647,7 @@
  GM_addStyle('.statbar span.good {border-color #3a05 !important;}');
 
 // Modifies some of the Attributes behind the "Turn" Box
- GM_addStyle('.turn {background: #cfb85f70 !important;}');
+ GM_addStyle('.turn {background: #77bee870 !important;}');
 
 // Color for the Stat Drop Box
  GM_addStyle('.statbar span.bad {background: #a36559;}');
@@ -674,20 +674,50 @@
 
  GM_addStyle('.utilichart .sortcol:hover {background: #6486bb94 !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+// Changes the colors of the Block Link Boxes used to show Chatrooms, or Active Matches
+// Initially used the Linear Gradient that .button also uses
+ GM_addStyle('.blocklink {background: rgba(30,40,50,.5) !important;}');
+
+// Initially ccd
+ GM_addStyle('.blocklink {color: #79b !important;}');
+
+// Originally #fff4 0 -1px 0
+ GM_addStyle('.blocklink {text-shadow: none !important;}');
+
+// Initially #2342
+ GM_addStyle('.blocklink {border: 1px solid #526c87 !important;}');
+
+// Initially #77bee8b3
+ GM_addStyle('.blocklink:hover {background: #1e2832 !important;}');
+
+// Initially #5a748e
+ GM_addStyle('.blocklink:hover {border-color: #ace !important;}');
+
+// Initially #246
+ GM_addStyle('.blocklink:hover {color: #ace !important;}');
 
  GM_addStyle('emptyspaces {border-right: #77A !important;}');
 
  GM_addStyle('emptyspaces {border-right: #77A !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+ GM_addStyle('#tooltipwrapper {color: #c3d3dede !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+ GM_addStyle('#tooltipwrapper .tooltip {border: 1px solid #5f7b9496 !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+ GM_addStyle('#tooltipwrapper .tooltip {background: rgb(30 31 35 / 56%) !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+ GM_addStyle('#tooltipwrapper .tooltip h2 {border-bottom: 1px solid #5f7b9496 !important;}');
 
- GM_addStyle('emptyspaces {border-right: #77A !important;}');
+ GM_addStyle('#tooltipwrapper .tooltip h2 {color: #d1eef2b8 !important;}');
+
+ GM_addStyle('#tooltipwrapper .tooltip {border: 1px solid #5f7b9496 !important;}');
+
+ GM_addStyle('.stat-boosted {color: #47b9b6ad !important;}');
+
+ GM_addStyle('.green-text {color: #47b9b6ad !important;}');
+
+ GM_addStyle('.dark .green-text {color: #47b9b6ad !important;}');
+
+ GM_addStyle('.stat-lowered {color: #d43f3fcc !important;}');
 
 })();
