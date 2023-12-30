@@ -512,8 +512,8 @@
 
  GM_addStyle('.popupmenu button:hover, .popupmenu button.sel:hover {background: #131a4dbd !important;}');
 
-// Changes those stubborn gray borders around the players' usernames. It appears during Battles, and possibly elsewhere.
- GM_addStyle('.userlist li {border-bottom: 1px solid #44c !important;}');
+// Changes those stubborn gray borders around the players' usernames. It appears during Battles, and possibly elsewhere. Originally #44c
+ GM_addStyle('.userlist li {border-bottom: 1px solid #45459947 !important;}');
 
 // Changes the Color of the Highlighted Boxes when receiving Notifications
  GM_addStyle('.button.notifying {background: #8fc3cf !important;}');
@@ -719,5 +719,11 @@
  GM_addStyle('.dark .green-text {color: #47b9b6ad !important;}');
 
  GM_addStyle('.stat-lowered {color: #d43f3fcc !important;}');
+
+ GM_addStyle('.ps-room {border-left: 1px solid #3953911c !important;}');
+
+ GM_addStyle('.teamchartbox {border-top: 1px solid #3953911c !important;}');
+
+ GM_addStyle('.chat-log-add {border-top: 1px solid #3953911c !important;}');
 
 })();
