@@ -1,0 +1,47 @@
+// ==UserScript==
+// @name         Dark YouTube: Blue
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @description  Tropica-Teru!
+// @author       Cure Summer
+// @match        *://www.youtube.com/*
+// @grant        GM_addStyle
+// @run-at       document-start
+// ==/UserScript==
+
+(function() {
+  'use strict';
+
+/* Just a minor little edit to make YouTube's Color Palette a little more Tropical!*/
+/* Now kick back, relax, watch some Tropical Rouge Precure, and get out there and Tropical Shine!*/
+
+
+ GM_addStyle('html[dark], [dark] {background: #12172c !important;}');
+
+ GM_addStyle('html[dark] {background: #12172c !important;}');
+
+ GM_addStyle('--yt-spec-base-background {background: #12172c !important;}');
+
+ GM_addStyle('#container.ytd-searchbox {background-color: #1f284c !important;}');
+
+ GM_addStyle('#container.ytd-searchbox {border: 1px solid #232e5a !important;}');
+
+ GM_addStyle('ytd-app {background: #12172c !important;}');
+
+ GM_addStyle('ytd-app {--app-drawer-content-container-background-color: #12172c !important;}');
+
+ GM_addStyle('ytd-app {#content-wrapper.ytd-feed-nudge-renderer: #2b4769 !important;}');
+
+ GM_addStyle('#content-wrapper.ytd-feed-nudge-renderer {background: #2b4769 !important;}');
+
+ GM_addStyle('#content-wrapper.ytd-feed-nudge-renderer {border: 1px solid rgb(78 115 221 / 20%) !important;}');
+
+ GM_addStyle('#background.ytd-masthead {background: #12172c !important;}');
+
+ GM_addStyle('html[dark], [dark] {--yt-spec-base-background: #12172c !important;}');
+
+ GM_addStyle('html[dark], [dark] {--yt-spec-raised-background: #1a2348 !important;');
+
+ GM_addStyle('html[dark], [dark] {--yt-spec-menu-background: #1a2348 !important;}');
+
+})();
