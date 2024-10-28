@@ -8,6 +8,7 @@
 // @match        *://www.wcofun.org/*
 // @match        *://www.wcofun.tv/*
 // @match        *://www.wcofun.net/*
+// @match        *://wcofun.net/*
 // @grant        none
 // @run-at       start
 // ==/UserScript==
